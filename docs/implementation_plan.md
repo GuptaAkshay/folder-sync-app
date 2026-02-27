@@ -12,17 +12,15 @@ FolderSync is a **mobile-first Android app** that lets users create "sync tasks"
 
 The Stitch project **"Folder Sync App"** (ID `14111882096883368259`) defines the following visible screens:
 
-````carousel
-![Welcome / Connect — first-time user onboarding, Google account connect CTA, Terms & Privacy](C:/Users/Akshay Gupta/.gemini/antigravity/brain/305eed84-08f0-456d-a62c-d5ea55425f54/welcome_screen_1772109521052.png)
-<!-- slide -->
-![Dashboard — user profile card, cloud storage usage, sync task cards with real-time status](C:/Users/Akshay Gupta/.gemini/antigravity/brain/305eed84-08f0-456d-a62c-d5ea55425f54/dashboard_screen_1772106034596.png)
-<!-- slide -->
-![History — filterable sync log (All / Success / Failed) showing individual files](C:/Users/Akshay Gupta/.gemini/antigravity/brain/305eed84-08f0-456d-a62c-d5ea55425f54/history_screen_1772106046262.png)
-<!-- slide -->
-![Add New Sync Task — form to pick remote/local folders, sync frequency, and two-way toggle](C:/Users/Akshay Gupta/.gemini/antigravity/brain/305eed84-08f0-456d-a62c-d5ea55425f54/add_task_screen_1772106056286.png)
-````
+![Welcome / Connect — first-time user onboarding, Google account connect CTA, Terms & Privacy](assets/welcome_screen_1772109521052.png)
+![Dashboard — user profile card, cloud storage usage, sync task cards with real-time status](assets/dashboard_screen_1772106034596.png)
+![History — filterable sync log (All / Success / Failed) showing individual files](assets/history_screen_1772106046262.png)
+![Add New Sync Task — form to pick remote/local folders, sync frequency, and two-way toggle](assets/add_task_screen_1772106056286.png)
 
 ### 1.3 User Journeys
+
+> [!NOTE]
+> **Mermaid Diagram:** To view the diagram below in VS Code, install the "Markdown Preview Mermaid Support" extension.
 
 ```mermaid
 flowchart TD
@@ -230,6 +228,9 @@ lib/
 ---
 
 ## 5. Architecture Diagram
+
+> [!NOTE]
+> **Mermaid Diagram:** To view the diagram below in VS Code, install the "Markdown Preview Mermaid Support" extension.
 
 ```mermaid
 graph TD

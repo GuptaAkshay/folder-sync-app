@@ -4,17 +4,18 @@ description: Git workflow for feature branches, commits, PRs, code review, and s
 
 # Feature Branch Workflow
 
+> Uses the **GitHub MCP server** for PR creation, review, and merge.
+
 ## 1. Create Feature Branch
 
 ```bash
-# From the main worktree, create and switch to a feature branch
+# From main, create and switch to a feature branch
 git checkout -b feat/<feature-name>
 ```
 
 If working on multiple features simultaneously, use **git worktree**:
 
 ```bash
-# Add a worktree for a parallel feature
 git worktree add ../folder-sync-app-<feature-name> -b feat/<feature-name>
 ```
 
@@ -22,7 +23,7 @@ git worktree add ../folder-sync-app-<feature-name> -b feat/<feature-name>
 
 // turbo-all
 
-Make commits at logical checkpoints during implementation:
+Make commits at logical checkpoints:
 
 ```bash
 git add -A
@@ -33,25 +34,54 @@ git commit --no-gpg-sign -m "<type>: <short description>
 
 Commit types: `feat`, `fix`, `refactor`, `docs`, `chore`, `test`
 
-## 3. Push Branch and Create PR
+## 3. Push Branch
 
 ```bash
 git push origin feat/<feature-name>
 ```
 
-Then create a PR on GitHub via the browser or CLI:
+## 4. Create PR via GitHub MCP
 
-```bash
-# Using GitHub CLI (if installed)
-gh pr create --title "feat: <description>" --body "<details>" --base main
+Use the GitHub MCP server's `create_pull_request` tool:
+
+```
+Tool: create_pull_request (MCP server: github)
+Arguments:
+  owner: GuptaAkshay
+  repo: folder-sync-app
+  title: "<type>: <description>"
+  body: "## Summary\n<what and why>\n\n## Changes\n<file-level details>\n\n## Testing\n<verification steps>"
+  head: feat/<feature-name>
+  base: main
 ```
 
-## 4. Code Review (Software Architect Role)
+## 5. Validate on Connected Device
 
-Review the PR as a **Software Architect** responsible for:
+Before reviewing and merging, build and deploy the app to a connected device to verify the changes work as expected:
+
+// turbo-all
+
+```bash
+flutter build apk --debug
+adb install -r build/app/outputs/flutter-apk/app-debug.apk
+adb shell am start -n com.foldersync.folder_sync/.MainActivity
+```
+
+Verify the specific feature changes on the physical device or emulator.
+
+## 6. Code Review via GitHub MCP (Software Architect Role)
+
+Use `get_pull_request` and `list_pull_request_files` to review:
+
+```
+Tool: get_pull_request (MCP server: github)
+Tool: get_pull_request_diff (MCP server: github)
+```
+
+Review as a **Software Architect** responsible for:
 
 - **Code quality**: clean, readable, no dead code
-- **Architecture compliance**: feature-first + clean architecture layers respected
+- **Architecture compliance**: feature-first + clean architecture layers
 - **Naming conventions**: consistent with project patterns
 - **Separation of concerns**: domain ≠ data ≠ presentation
 - **Error handling**: proper use of Failure/Exception hierarchy
@@ -59,18 +89,34 @@ Review the PR as a **Software Architect** responsible for:
 - **Performance**: no unnecessary rebuilds, efficient streams
 - **Documentation**: public APIs documented, TODOs tracked
 
-## 5. Approve and Squash Merge
+Add review comments via MCP if needed:
+
+```
+Tool: create_pull_request_review (MCP server: github)
+Arguments:
+  owner: GuptaAkshay
+  repo: folder-sync-app
+  pull_number: <PR number>
+  event: "APPROVE"  # or "REQUEST_CHANGES"
+  body: "<review summary>"
+```
+
+## 7. Squash Merge via GitHub MCP
 
 Once review passes:
 
-```bash
-# Using GitHub CLI
-gh pr merge --squash --delete-branch
+```
+Tool: merge_pull_request (MCP server: github)
+Arguments:
+  owner: GuptaAkshay
+  repo: folder-sync-app
+  pull_number: <PR number>
+  merge_method: "squash"
 ```
 
-Or via the GitHub UI: select **"Squash and merge"** → delete branch.
+## 8. Update Local Main
 
-## 6. Update Local Main
+// turbo-all
 
 ```bash
 git checkout main
@@ -81,4 +127,5 @@ If using worktrees, clean up:
 
 ```bash
 git worktree remove ../folder-sync-app-<feature-name>
+git branch -D feat/<feature-name>
 ```
