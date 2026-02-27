@@ -8,8 +8,6 @@ description: Git workflow for feature branches, commits, PRs, code review, and s
 
 ## 1. Create Feature Branch
 
-> **Documentation Rule**: When starting a new feature, create its specific implementation guide under `docs/` named after the FR/NFR numbers (e.g., `docs/FR-1.md` or `docs/FR-1_NFR-2.md` if covering multiple).
-
 ```bash
 # From main, create and switch to a feature branch
 git checkout -b feat/<feature-name>
