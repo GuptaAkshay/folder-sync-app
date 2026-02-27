@@ -7,6 +7,8 @@ import '../../../features/auth/data/repositories/auth_repository_impl.dart';
 import '../../../features/auth/domain/entities/auth_user.dart';
 import '../../../features/auth/domain/repositories/auth_repository.dart';
 import '../../../features/sync_tasks/data/repositories/sync_task_repository_impl.dart';
+import '../../../features/sync_tasks/data/services/drive_service.dart';
+import '../../../features/sync_tasks/domain/entities/drive_storage_info.dart';
 import '../../../features/sync_tasks/domain/entities/sync_task.dart';
 import '../../../features/sync_tasks/domain/repositories/sync_task_repository.dart';
 import '../../../features/history/data/repositories/sync_history_repository_impl.dart';
@@ -69,7 +71,25 @@ class AuthNotifier extends AsyncNotifier<AuthUser?> {
   }
 }
 
-// ─── Sync Task Providers ────────────────────────────
+// ─── Drive Providers ────────────────────────────────
+
+/// Provides the Drive service instance.
+final driveServiceProvider = Provider<DriveService>((ref) {
+  return DriveService();
+});
+
+/// Fetches Drive storage quota for the authenticated user.
+///
+/// Automatically re-fetches when auth state changes (sign-in/out).
+final driveStorageInfoProvider = FutureProvider<DriveStorageInfo?>((ref) async {
+  final authState = ref.watch(authStateProvider);
+  final user = authState.valueOrNull;
+
+  if (user == null || user.accessToken == null) return null;
+
+  final driveService = ref.read(driveServiceProvider);
+  return driveService.getStorageQuota(user.accessToken!);
+});
 
 /// Hive box for sync tasks.
 final syncTaskBoxProvider = Provider<Box<String>>((ref) {

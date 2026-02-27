@@ -12,12 +12,14 @@ class DriveConnectionCard extends StatelessWidget {
     required this.userEmail,
     required this.usedStorageGb,
     required this.totalStorageGb,
+    this.isLoading = false,
   });
 
   final String userName;
   final String userEmail;
   final double usedStorageGb;
   final double totalStorageGb;
+  final bool isLoading;
 
   double get _usagePercent => (usedStorageGb / totalStorageGb).clamp(0.0, 1.0);
 
@@ -76,38 +78,51 @@ class DriveConnectionCard extends StatelessWidget {
           const SizedBox(height: 16),
 
           // Storage usage
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Used: ${usedStorageGb.toStringAsFixed(1)} GB / '
-                'Total: ${totalStorageGb.toStringAsFixed(0)} GB',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  fontWeight: FontWeight.w500,
-                  color: AppTheme.textSecondary,
-                ),
+          if (isLoading)
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 4),
+              child: LinearProgressIndicator(
+                backgroundColor: Color(0xFFF1F5F9),
+                valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primary),
+                minHeight: 10,
               ),
-              Text(
-                '$percentage%',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: AppTheme.primary,
+            )
+          else ...[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Used: ${usedStorageGb.toStringAsFixed(1)} GB / '
+                  'Total: ${totalStorageGb.toStringAsFixed(0)} GB',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: AppTheme.textSecondary,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-
-          // Progress bar
-          ClipRRect(
-            borderRadius: BorderRadius.circular(AppTheme.radiusFull),
-            child: LinearProgressIndicator(
-              value: _usagePercent,
-              backgroundColor: const Color(0xFFF1F5F9),
-              valueColor: const AlwaysStoppedAnimation<Color>(AppTheme.primary),
-              minHeight: 10,
+                Text(
+                  '$percentage%',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: AppTheme.primary,
+                  ),
+                ),
+              ],
             ),
-          ),
+            const SizedBox(height: 8),
+
+            // Progress bar
+            ClipRRect(
+              borderRadius: BorderRadius.circular(AppTheme.radiusFull),
+              child: LinearProgressIndicator(
+                value: _usagePercent,
+                backgroundColor: const Color(0xFFF1F5F9),
+                valueColor: const AlwaysStoppedAnimation<Color>(
+                  AppTheme.primary,
+                ),
+                minHeight: 10,
+              ),
+            ),
+          ],
         ],
       ),
     );
