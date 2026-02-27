@@ -4,6 +4,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/errors/exceptions.dart';
+import '../../../../core/utils/app_logger.dart';
 import '../../domain/entities/auth_user.dart';
 import '../../domain/repositories/auth_repository.dart';
 
@@ -27,16 +28,16 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<AuthUser> signIn() async {
     try {
-      print('[AUTH] Starting Google Sign-In...');
+      AppLogger.i('[AUTH] Starting Google Sign-In...');
       final account = await _googleSignIn.signIn();
       if (account == null) {
-        print('[AUTH] Sign-in cancelled by user');
+        AppLogger.i('[AUTH] Sign-in cancelled by user');
         throw const AuthException('Sign-in cancelled by user');
       }
 
-      print('[AUTH] Sign-in successful for: ${account.email}');
+      AppLogger.i('[AUTH] Sign-in successful for: ${account.email}');
       final auth = await account.authentication;
-      print(
+      AppLogger.d(
         '[AUTH] Got auth tokens, accessToken present: ${auth.accessToken != null}',
       );
 
@@ -52,9 +53,9 @@ class AuthRepositoryImpl implements AuthRepository {
       if (auth.accessToken != null) {
         try {
           await _secureStorage.write(key: _tokenKey, value: auth.accessToken);
-          print('[AUTH] Token persisted to secure storage');
+          AppLogger.d('[AUTH] Token persisted to secure storage');
         } catch (storageError) {
-          print(
+          AppLogger.e(
             '[AUTH] Warning: Failed to persist token to secure storage: $storageError',
           );
           // Continue — sign-in still succeeded, token is in memory
@@ -62,10 +63,10 @@ class AuthRepositoryImpl implements AuthRepository {
       }
 
       _authStateController.add(user);
-      print('[AUTH] Auth state updated, user signed in');
+      AppLogger.i('[AUTH] Auth state updated, user signed in');
       return user;
     } catch (e) {
-      print('[AUTH] Sign-in error: $e');
+      AppLogger.e('[AUTH] Sign-in error: $e');
       if (e is AuthException) rethrow;
       throw AuthException('Sign-in failed: $e');
     }
