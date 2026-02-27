@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../app/theme.dart';
 import '../../../../core/constants/app_constants.dart';
+import '../../../../shared/widgets/app_logo.dart';
 
 /// About screen (FR-9, P2).
 ///
@@ -24,14 +25,7 @@ class AboutScreen extends StatelessWidget {
             const SizedBox(height: 32),
 
             // App icon
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: AppTheme.primary,
-                borderRadius: BorderRadius.circular(AppTheme.radiusXl),
-              ),
-              child: const Icon(Icons.sync_alt, size: 48, color: Colors.white),
-            ),
+            const AppLogo(),
             const SizedBox(height: 16),
 
             Text(

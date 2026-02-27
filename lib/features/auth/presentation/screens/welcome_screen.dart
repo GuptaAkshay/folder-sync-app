@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../app/theme.dart';
+import '../../../../shared/widgets/app_logo.dart';
 import '../../../../shared/providers/app_providers.dart';
 
 /// Welcome / Onboarding screen (FR-0).
@@ -26,18 +27,7 @@ class WelcomeScreen extends ConsumerWidget {
               const Spacer(flex: 2),
 
               // App icon
-              Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: AppTheme.primary,
-                  borderRadius: BorderRadius.circular(AppTheme.radiusXl),
-                ),
-                child: const Icon(
-                  Icons.sync_alt,
-                  size: 48,
-                  color: Colors.white,
-                ),
-              ),
+              const AppLogo(),
               const SizedBox(height: 24),
 
               // App name

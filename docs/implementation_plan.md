@@ -115,6 +115,9 @@ When a conflict is detected (file changed on both local and remote since last sy
 | **NFR-4** | **Offline capable** | Primary operations must work without network; sync queues up. |
 | **NFR-5** | **Responsive & performant** | 60fps scrolling, < 2s cold start. |
 | **NFR-6** | **Secure auth** | OAuth tokens stored securely via `flutter_secure_storage`. No passwords stored. |
+| **NFR-7** | **Consistent brand identity** | A single `AppLogo` widget (SVG-based) used everywhere: Welcome, Dashboard app bar, About screen. Source SVG at `assets/sync_alt.svg`. |
+| **NFR-8** | **Native splash screen** | Android launch screen with `#F8F7F5` background + centered app icon for branded cold-start experience. |
+| **NFR-9** | **Custom launcher icon** | Amber `#FFB247` background + white sync_alt icon. Generated via `flutter_launcher_icons` from `assets/app_icon.png`. |
 
 ### 1.7 Scope Boundaries (v1 vs. Future)
 
@@ -290,7 +293,8 @@ graph TD
 | **File system** | `path_provider` + `dart:io` | Standard; abstracted behind a service interface. |
 | **Code generation** | `build_runner`, `freezed`, `json_serializable` | Immutable models, union types, JSON mapping. |
 | **Linting** | `flutter_lints` | Strict rule set from day one. |
-| **Icons/Font** | `google_fonts` (Roboto Flex), Material Symbols | Match Stitch design. |
+| **Icons/Font** | `google_fonts` (Roboto Flex), `flutter_svg`, Material Symbols | SVG-based `AppLogo` widget for brand consistency. |
+| **App icon** | `flutter_launcher_icons` | Generate custom launcher icons from `assets/app_icon.png`. |
 
 ---
 

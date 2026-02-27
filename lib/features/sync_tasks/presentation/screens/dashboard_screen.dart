@@ -6,6 +6,7 @@ import '../../../../app/router.dart';
 import '../../../../app/theme.dart';
 import '../../../../shared/providers/app_providers.dart';
 import '../../domain/entities/sync_task.dart';
+import '../../../../shared/widgets/app_logo.dart';
 import '../widgets/drive_connection_card.dart';
 import '../widgets/sync_task_card.dart';
 
@@ -32,18 +33,7 @@ class DashboardScreen extends ConsumerWidget {
             backgroundColor: AppTheme.surfaceLight,
             title: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: AppTheme.primary,
-                    borderRadius: BorderRadius.circular(AppTheme.radiusMd),
-                  ),
-                  child: const Icon(
-                    Icons.sync_alt,
-                    color: Colors.white,
-                    size: 20,
-                  ),
-                ),
+                const AppLogo(size: AppLogoSize.small),
                 const SizedBox(width: 12),
                 const Text('FolderSync'),
               ],

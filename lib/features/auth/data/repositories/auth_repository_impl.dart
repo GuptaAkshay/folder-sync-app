@@ -27,12 +27,19 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<AuthUser> signIn() async {
     try {
+      print('[AUTH] Starting Google Sign-In...');
       final account = await _googleSignIn.signIn();
       if (account == null) {
+        print('[AUTH] Sign-in cancelled by user');
         throw const AuthException('Sign-in cancelled by user');
       }
 
+      print('[AUTH] Sign-in successful for: ${account.email}');
       final auth = await account.authentication;
+      print(
+        '[AUTH] Got auth tokens, accessToken present: ${auth.accessToken != null}',
+      );
+
       final user = AuthUser(
         id: account.id,
         email: account.email,
@@ -41,14 +48,24 @@ class AuthRepositoryImpl implements AuthRepository {
         accessToken: auth.accessToken,
       );
 
-      // Persist token securely
+      // Persist token securely (non-fatal if it fails)
       if (auth.accessToken != null) {
-        await _secureStorage.write(key: _tokenKey, value: auth.accessToken);
+        try {
+          await _secureStorage.write(key: _tokenKey, value: auth.accessToken);
+          print('[AUTH] Token persisted to secure storage');
+        } catch (storageError) {
+          print(
+            '[AUTH] Warning: Failed to persist token to secure storage: $storageError',
+          );
+          // Continue — sign-in still succeeded, token is in memory
+        }
       }
 
       _authStateController.add(user);
+      print('[AUTH] Auth state updated, user signed in');
       return user;
     } catch (e) {
+      print('[AUTH] Sign-in error: $e');
       if (e is AuthException) rethrow;
       throw AuthException('Sign-in failed: $e');
     }

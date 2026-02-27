@@ -30,13 +30,14 @@ dependencies:
   hive_flutter: ^1.1.0
 
   # Background sync
-  workmanager: ^0.5.2
+  workmanager: ^0.9.0+3
 
   # File system
   path_provider: ^2.1.5
 
   # UI / Fonts
   google_fonts: ^6.2.1
+  flutter_svg: ^2.0.17
 
   # Immutable models
   freezed_annotation: ^2.4.4
@@ -53,5 +54,17 @@ dev_dependencies:
   json_serializable: ^6.9.4
   riverpod_generator: ^2.6.3
 
+  # App icon generation
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/app_icon.png"
+  adaptive_icon_background: "#FFB247"
+  adaptive_icon_foreground: "assets/app_icon.png"
+
 flutter:
   uses-material-design: true
+  assets:
+    - assets/

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash background: AppTheme.backgroundLight (#F8F7F5) -->
+    <color name="splash_background">#F8F7F5</color>
+	<color name="ic_launcher_background">#FFB247</color>
+</resources>
