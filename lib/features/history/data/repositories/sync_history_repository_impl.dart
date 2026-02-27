@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:hive/hive.dart';
 
+import '../../../../core/utils/app_logger.dart';
 import '../../domain/entities/sync_history_entry.dart';
 import '../../domain/repositories/sync_history_repository.dart';
 import '../models/sync_history_model.dart';
@@ -29,12 +30,14 @@ class SyncHistoryRepositoryImpl implements SyncHistoryRepository {
   Future<void> addEntry(SyncHistoryEntry entry) async {
     final model = SyncHistoryModel.fromEntity(entry);
     await box.put(entry.id, model.encode());
+    AppLogger.d('[HISTORY] Added entry: ${entry.id} (${entry.status.name})');
     _notifyListeners();
   }
 
   @override
   Future<void> clearAll() async {
     await box.clear();
+    AppLogger.i('[HISTORY] Cleared all history entries');
     _notifyListeners();
   }
 
