@@ -3,11 +3,14 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'package:googleapis/drive/v3.dart' as drive_api;
+
 import '../../../features/auth/data/repositories/auth_repository_impl.dart';
 import '../../../features/auth/domain/entities/auth_user.dart';
 import '../../../features/auth/domain/repositories/auth_repository.dart';
 import '../../../features/sync_tasks/data/repositories/sync_task_repository_impl.dart';
 import '../../../features/sync_tasks/data/services/drive_service.dart';
+import '../../../features/sync_tasks/domain/entities/drive_folder.dart';
 import '../../../features/sync_tasks/domain/entities/drive_storage_info.dart';
 import '../../../features/sync_tasks/domain/entities/sync_task.dart';
 import '../../../features/sync_tasks/domain/repositories/sync_task_repository.dart';
@@ -90,6 +93,40 @@ final driveStorageInfoProvider = FutureProvider<DriveStorageInfo?>((ref) async {
   final driveService = ref.read(driveServiceProvider);
   return driveService.getStorageQuota(user.accessToken!);
 });
+
+/// Fetches Drive folders for a given parent ID (null means root).
+/// Handles 401 errors by attempting a silent refresh.
+final driveFolderListProvider = FutureProvider.autoDispose
+    .family<List<DriveFolder>, String?>((ref, parentId) async {
+      final authState = ref.watch(authStateProvider);
+      final user = authState.valueOrNull;
+
+      if (user == null || user.accessToken == null) return [];
+
+      final driveService = ref.read(driveServiceProvider);
+      try {
+        return await driveService.listFolders(
+          user.accessToken!,
+          parentId: parentId,
+        );
+      } on drive_api.DetailedApiRequestError catch (e) {
+        if (e.status == 401) {
+          final success = await ref
+              .read(authStateProvider.notifier)
+              .silentRefresh();
+          if (success) {
+            final newUser = ref.read(authStateProvider).valueOrNull;
+            if (newUser?.accessToken != null) {
+              return await driveService.listFolders(
+                newUser!.accessToken!,
+                parentId: parentId,
+              );
+            }
+          }
+        }
+        rethrow;
+      }
+    });
 
 /// Hive box for sync tasks.
 final syncTaskBoxProvider = Provider<Box<String>>((ref) {

@@ -1,0 +1,20 @@
+class DriveFolder {
+  final String id;
+  final String name;
+  final String? mimeType;
+
+  const DriveFolder({required this.id, required this.name, this.mimeType});
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DriveFolder &&
+          runtimeType == other.runtimeType &&
+          id == other.id;
+
+  @override
+  int get hashCode => id.hashCode;
+
+  @override
+  String toString() => 'DriveFolder(id: $id, name: $name)';
+}
