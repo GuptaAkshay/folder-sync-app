@@ -22,6 +22,7 @@ class DashboardScreen extends ConsumerWidget {
     final authState = ref.watch(authStateProvider);
     final user = authState.valueOrNull;
     final tasksAsync = ref.watch(syncTasksStreamProvider);
+    final storageAsync = ref.watch(driveStorageInfoProvider);
 
     return Scaffold(
       backgroundColor: AppTheme.backgroundLight,
@@ -51,13 +52,14 @@ class DashboardScreen extends ConsumerWidget {
             padding: const EdgeInsets.all(AppTheme.spacingMd),
             sliver: SliverList(
               delegate: SliverChildListDelegate([
-                // Drive Connection card — from auth user
+                // Drive Connection card — from auth user + storage quota
                 if (user != null)
                   DriveConnectionCard(
                     userName: user.displayName,
                     userEmail: user.email,
-                    usedStorageGb: 0,
-                    totalStorageGb: 15.0,
+                    usedStorageGb: storageAsync.valueOrNull?.usedGb ?? 0,
+                    totalStorageGb: storageAsync.valueOrNull?.totalGb ?? 15.0,
+                    isLoading: storageAsync.isLoading,
                   )
                 else
                   const DriveConnectionCard(
