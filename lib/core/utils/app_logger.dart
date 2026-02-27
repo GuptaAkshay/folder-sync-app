@@ -3,6 +3,7 @@ import 'package:logger/logger.dart';
 /// Centralized logging utility for the app.
 class AppLogger {
   static final Logger _logger = Logger(
+    filter: ProductionFilter(), // Forces logs to print even in release builds
     printer: PrettyPrinter(
       methodCount: 0, // Number of method calls to be displayed
       errorMethodCount: 5, // Number of method calls if stacktrace is provided
