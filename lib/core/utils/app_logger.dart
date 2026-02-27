@@ -3,7 +3,7 @@ import 'package:logging/logging.dart';
 
 /// Centralized logging utility for the app.
 class AppLogger {
-  static final Logger _logger = Logger('AppLogger');
+  static final Logger _logger = Logger('FolderSyncLogger');
   static bool _initialized = false;
 
   /// Initializes the logging system. Must be called before any logs are emitted.
