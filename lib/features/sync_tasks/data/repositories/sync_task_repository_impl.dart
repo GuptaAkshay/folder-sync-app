@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:hive/hive.dart';
 
+import '../../../../core/utils/app_logger.dart';
 import '../../domain/entities/sync_task.dart';
 import '../../domain/repositories/sync_task_repository.dart';
 import '../models/sync_task_model.dart';
@@ -47,6 +48,7 @@ class SyncTaskRepositoryImpl implements SyncTaskRepository {
     );
     final model = SyncTaskModel.fromEntity(newTask);
     await box.put(newTask.id, model.encode());
+    AppLogger.i('[SYNC_TASK] Created task: ${newTask.name} (${newTask.id})');
     _notifyListeners();
     return newTask;
   }
@@ -55,6 +57,7 @@ class SyncTaskRepositoryImpl implements SyncTaskRepository {
   Future<SyncTask> updateTask(SyncTask task) async {
     final model = SyncTaskModel.fromEntity(task);
     await box.put(task.id, model.encode());
+    AppLogger.d('[SYNC_TASK] Updated task: ${task.name} (${task.id})');
     _notifyListeners();
     return task;
   }
@@ -62,6 +65,7 @@ class SyncTaskRepositoryImpl implements SyncTaskRepository {
   @override
   Future<void> deleteTask(String id) async {
     await box.delete(id);
+    AppLogger.i('[SYNC_TASK] Deleted task: $id');
     _notifyListeners();
   }
 

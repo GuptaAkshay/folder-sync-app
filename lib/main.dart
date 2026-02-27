@@ -3,10 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'app/app.dart';
+import 'core/utils/app_logger.dart';
 import 'shared/providers/app_providers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize the logging system
+  AppLogger.init();
 
   // Initialize Hive for local storage
   await Hive.initFlutter();
