@@ -1,8 +1,10 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../app/theme.dart';
+import '../../../../core/utils/app_logger.dart';
 import '../../../../shared/providers/app_providers.dart';
 import '../../domain/entities/drive_folder.dart';
 import '../../domain/entities/sync_task.dart';
@@ -131,9 +133,31 @@ class _AddTaskScreenState extends ConsumerState<AddTaskScreen> {
               label: 'Select Local Folder',
               selectedPath: _localFolderPath,
               icon: Icons.folder_outlined,
-              onTap: () {
-                // TODO: Open local folder picker
-                setState(() => _localFolderPath = '/sdcard/Documents/Sync');
+              onTap: () async {
+                AppLogger.d(
+                  '[AddTaskScreen] Launching native local folder picker',
+                );
+                try {
+                  final result = await FilePicker.platform.getDirectoryPath(
+                    dialogTitle: 'Select Local Folder',
+                  );
+                  if (result != null) {
+                    AppLogger.i(
+                      '[AddTaskScreen] User selected local folder: $result',
+                    );
+                    setState(() => _localFolderPath = result);
+                  } else {
+                    AppLogger.d(
+                      '[AddTaskScreen] User cancelled native local folder picker',
+                    );
+                  }
+                } catch (e, stack) {
+                  AppLogger.e(
+                    '[AddTaskScreen] Native local folder picker failed',
+                    error: e,
+                    stackTrace: stack,
+                  );
+                }
               },
             ),
             const SizedBox(height: AppTheme.spacingLg),
