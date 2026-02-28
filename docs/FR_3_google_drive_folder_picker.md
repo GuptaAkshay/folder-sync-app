@@ -1,7 +1,7 @@
 # Implementation Guide: Google Drive Folder Picker
 
 ## Objective
-Implement a Google Drive folder picker to allow users to select a remote cloud folder when creating a new sync task. This is the first component needed for the "Add New Sync Task" form.
+Implement a Google Drive folder picker to allow users to select a remote cloud folder when creating a new sync task. This is the first component needed for the "Add New Sync Task" form. The picker should only display and allow navigating into folders. Files should be explicitly filtered out at the API level.
 
 ## Requirements Covered
 - **FR-3**: Add New Sync Task — remote folder picker (Google Drive API).
@@ -11,21 +11,27 @@ Implement a Google Drive folder picker to allow users to select a remote cloud f
 ## Architecture & Components
 
 ### Domain Layer
-- **Entity**: `DriveFolder` (id, name, mimeType).
-- **Repository Interface**: Expand `SyncTaskRepository` (or create a new `DriveRepository` interface) to include `Future<List<DriveFolder>> getFolders({String? parentId})`.
-  *Note: Given the specific nature of Drive API operations, a dedicated `DriveRepository` in the `sync_tasks` feature (or a shared `drive` feature) is appropriate.*
+### Domain Layer
+- **Entity**: `DriveFolder` (id, name, mimeType). Since we are exclusively dealing with folders, we can retain the `DriveFolder` entity instead of generalizing to `DriveItem`.
+- **Repository Interface**: Expand `SyncTaskRepository` (or create a new `DriveRepository` interface) to include `Future<List<DriveItem>> getItems({String? parentId})`.
 
 ### Data Layer
 - **Implementation**: Expand `DriveService` (created during Quota implementation) to include:
   - `Future<List<DriveFolder>> listFolders(String accessToken, {String? folderId})`
-  - Uses `DriveApi.files.list` with query `mimeType='application/vnd.google-apps.folder' and trashed=false`. If `folderId` is provided, add `'folderId' in parents`.
+  - Uses `DriveApi.files.list` with specific parameters:
+    - `q`: `mimeType='application/vnd.google-apps.folder' and trashed=false`. If `folderId` is provided, append ` and '<folderId>' in parents`.
+    - `$fields`: Request a richer set of properties to enhance the UI: `files(id, name, mimeType, iconLink, size, modifiedTime)`.
+    - `orderBy`: `folder, name` (to consistently sort folders at the top, followed by files alphabetically).
+    - `pageSize`: Explicitly manage limits (e.g., 1000 items) or note pagination needs via `nextPageToken`.
+    - `supportsAllDrives`: Set to `true` and `includeItemsFromAllDrives: true` to ensure the picker can browse Shared Drives, not just "My Drive".
 
 ### Presentation Layer
 - **Screen/Dialog**: `DriveFolderPickerScreen` (or a bottom sheet/dialog).
 - **UI Elements**:
   - App bar with current path / "Back" button.
-  - `ListView` of `ListTile`s showing folder icons and names.
-  - "Select this folder" floating action button or checkmark.
+  - "Select this folder" button in the AppBar to select the *currently viewed* folder.
+  - `ListView` of `ListTile`s showing only folders.
+    - Folders: folder icon, tapping navigates into the folder.
   - Loading indicators (`CircularProgressIndicator`) while fetching folders.
   - Error states (empty state, network error state).
 
@@ -43,8 +49,7 @@ Implement a Google Drive folder picker to allow users to select a remote cloud f
 ## Testing Strategy
 - **Manual Device Testing**:
   - Connect a real Google account.
-  - Open the picker and verify the root Drive folders load.
-  - Navigate into a subfolder and verify its contents load.
-  - Navigate back up the hierarchy.
-  - Select a folder and verify the correct ID and name are returned to the caller.
+  - Open the picker and verify the root Drive folders load (no files should be visible).
+  - Navigate into a subfolder and verify its folder contents load.
+  - Select a folder via the AppBar button and verify the correct ID and name are returned.
   - Revoke Drive access via Google Account settings, try to open the picker, and verify the app handles the 401 (triggers re-auth prompt).

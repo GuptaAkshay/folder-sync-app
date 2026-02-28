@@ -8,6 +8,7 @@ import '../../../features/auth/domain/entities/auth_user.dart';
 import '../../../features/auth/domain/repositories/auth_repository.dart';
 import '../../../features/sync_tasks/data/repositories/sync_task_repository_impl.dart';
 import '../../../features/sync_tasks/data/services/drive_service.dart';
+import '../../../features/sync_tasks/domain/entities/drive_folder.dart';
 import '../../../features/sync_tasks/domain/entities/drive_storage_info.dart';
 import '../../../features/sync_tasks/domain/entities/sync_task.dart';
 import '../../../features/sync_tasks/domain/repositories/sync_task_repository.dart';
@@ -90,6 +91,20 @@ final driveStorageInfoProvider = FutureProvider<DriveStorageInfo?>((ref) async {
   final driveService = ref.read(driveServiceProvider);
   return driveService.getStorageQuota(user.accessToken!);
 });
+
+/// Fetches Drive folders for a specific parent folder ID (null means root).
+final driveFolderListProvider =
+    FutureProvider.family<List<DriveFolder>, String?>((ref, parentId) async {
+      final authState = ref.watch(authStateProvider);
+      final user = authState.valueOrNull;
+
+      if (user == null || user.accessToken == null) {
+        throw Exception('User is not authenticated or access token is missing');
+      }
+
+      final driveService = ref.read(driveServiceProvider);
+      return driveService.listFolders(user.accessToken!, parentId: parentId);
+    });
 
 /// Hive box for sync tasks.
 final syncTaskBoxProvider = Provider<Box<String>>((ref) {
