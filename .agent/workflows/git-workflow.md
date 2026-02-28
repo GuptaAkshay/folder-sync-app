@@ -6,7 +6,13 @@ description: Git workflow for feature branches, commits, PRs, code review, and s
 
 > Uses the **GitHub MCP server** for PR creation, review, and merge.
 
-## 1. Create Feature Branch
+## 1. Create a Branch
+
+> **Rule of Thumb:** Always create a new branch to move changes to `main`. Direct commits to `main` are forbidden.
+> **Naming Conventions:**
+> *   `feat/...` for new features or logic changes.
+> *   `doc/...` for documentation, workflow, or README changes.
+> *   `fix/...` for bug fixes.
 
 ```bash
 # Ensure you are on main and up to date
@@ -16,11 +22,11 @@ git pull
 # Create the worktrees directory if it doesn't exist
 mkdir -p wt
 
-# Create a new feature branch in a dedicated worktree inside the wt/ folder
-git worktree add wt/<feature-name> -b feat/<feature-name>
+# Create a new branch in a dedicated worktree inside the wt/ folder
+git worktree add wt/<branch-name> -b <prefix>/<branch-name>
 
 # Navigate into the new worktree to begin work
-cd wt/<feature-name>
+cd wt/<branch-name>
 ```
 
 ## 2. Implement with Checkpoint Commits
