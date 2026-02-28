@@ -9,14 +9,18 @@ description: Git workflow for feature branches, commits, PRs, code review, and s
 ## 1. Create Feature Branch
 
 ```bash
-# From main, create and switch to a feature branch
-git checkout -b feat/<feature-name>
-```
+# Ensure you are on main and up to date
+git checkout main
+git pull
 
-If working on multiple features simultaneously, use **git worktree**:
+# Create the worktrees directory if it doesn't exist
+mkdir -p wt
 
-```bash
-git worktree add ../folder-sync-app-<feature-name> -b feat/<feature-name>
+# Create a new feature branch in a dedicated worktree inside the wt/ folder
+git worktree add wt/<feature-name> -b feat/<feature-name>
+
+# Navigate into the new worktree to begin work
+cd wt/<feature-name>
 ```
 
 ## 2. Implement with Checkpoint Commits
@@ -119,13 +123,16 @@ Arguments:
 // turbo-all
 
 ```bash
+# Navigate back to the root of the main repository
+cd /root/workspace/folder-sync-app
+
 git checkout main
 git pull origin main
 ```
 
-If using worktrees, clean up:
+Clean up the worktree and the feature branch:
 
 ```bash
-git worktree remove ../folder-sync-app-<feature-name>
+git worktree remove wt/<feature-name>
 git branch -D feat/<feature-name>
 ```
