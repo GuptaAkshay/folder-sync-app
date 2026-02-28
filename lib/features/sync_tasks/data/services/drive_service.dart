@@ -3,6 +3,7 @@ import 'package:googleapis_auth/googleapis_auth.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../../core/utils/app_logger.dart';
+import '../../domain/entities/drive_folder.dart';
 import '../../domain/entities/drive_storage_info.dart';
 
 /// Service for interacting with the Google Drive API.
@@ -53,6 +54,73 @@ class DriveService {
       );
     } catch (e) {
       AppLogger.e('[DRIVE] Failed to fetch storage quota: $e');
+      rethrow;
+    } finally {
+      client.close();
+    }
+  }
+
+  /// Fetches folders from Google Drive, optionally under a specific parent folder.
+  /// If parentId is null, fetches folders from the root directory.
+  Future<List<DriveFolder>> listFolders(
+    String accessToken, {
+    String? parentId,
+  }) async {
+    final client = authenticatedClient(
+      http.Client(),
+      AccessCredentials(
+        AccessToken(
+          'Bearer',
+          accessToken,
+          DateTime.now().toUtc().add(const Duration(hours: 1)),
+        ),
+        null,
+        [],
+      ),
+    );
+
+    try {
+      AppLogger.d('[DRIVE] listFolders called with parentId: $parentId');
+      final driveApi = drive.DriveApi(client);
+
+      // Build the query: not trashed
+      String query = "trashed=false";
+
+      // If parentId is provided, filter by it; otherwise, default to 'root'
+      if (parentId != null) {
+        query += " and '$parentId' in parents";
+      } else {
+        query += " and 'root' in parents";
+      }
+
+      AppLogger.d('[DRIVE] Executing files.list with query: $query');
+      final fileList = await driveApi.files.list(
+        q: query,
+        $fields: 'files(id, name, mimeType)',
+        orderBy: 'folder, name',
+        supportsAllDrives: true,
+        includeItemsFromAllDrives: true,
+      );
+
+      final folders = (fileList.files ?? [])
+          .where((file) => file.id != null && file.name != null)
+          .map(
+            (file) => DriveFolder(
+              id: file.id!,
+              name: file.name!,
+              mimeType: file.mimeType,
+            ),
+          )
+          .toList();
+
+      AppLogger.d('[DRIVE] Found ${folders.length} folders');
+      return folders;
+    } catch (e, stack) {
+      AppLogger.e(
+        '[DRIVE] Failed to list folders: $e',
+        error: e,
+        stackTrace: stack,
+      );
       rethrow;
     } finally {
       client.close();

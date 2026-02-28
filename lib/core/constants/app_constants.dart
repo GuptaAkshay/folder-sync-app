@@ -10,6 +10,6 @@ class AppConstants {
 
   /// Google Drive OAuth scopes.
   static const List<String> driveScopes = [
-    'https://www.googleapis.com/auth/drive.file',
+    'https://www.googleapis.com/auth/drive',
   ];
 }
