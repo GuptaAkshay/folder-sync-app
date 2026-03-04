@@ -1,0 +1,606 @@
+--------- beginning of main
+02-28 14:39:14.626 30895 30895 I ync.folder_sync: Late-enabling -Xcheck:jni
+02-28 14:39:14.655 30895 30895 E ync.folder_sync: Unknown bits set in runtime_flags: 0x40000000
+02-28 14:39:14.655 30895 30895 I ync.folder_sync: Using CollectorTypeCMC GC.
+02-28 14:39:14.865 30895 30895 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+02-28 14:39:14.870 30895 30895 D OplusActivityThreadExtImpl: java.lang.NoSuchMethodException: dalvik.system.VMRuntime.SupressionGC [int, int]
+02-28 14:39:14.871 30895 30895 W libc    : Access denied finding property "persist.vendor.sys.activitylog"
+02-28 14:39:14.871 30895 30895 I OneTrace: Mark active for pid=30895? true
+02-28 14:39:14.871 30895 30895 D cutils-dev: otrace_set_tracing_enabled? true tag:0
+02-28 14:39:14.872 30895 30895 D cutils-dev: properties changed in otrace_seq_number_changed!
+02-28 14:39:14.916 30895 30949 D OplusActivityManager: get AMS extension: android.os.BinderProxy@2671566
+02-28 14:39:14.917 30895 30949 D OplusAppHeapManager: java.lang.NoSuchMethodException: dalvik.system.VMRuntime.updateProcessValue [int, int, int]
+02-28 14:39:14.917 30895 30949 D SurfaceSyncGroup: preCreateSurfaceSyncGroupTimerThread
+02-28 14:39:14.918 30895 30895 D CompactWindowAppManager: initCompactApplicationInfo CompactMode: , NormalMode: 
+--------- beginning of system
+02-28 14:39:14.920 30895 30895 V Configuration: Updating configuration, locales updated from [] to [en_GB]
+02-28 14:39:14.921 30895 30895 D OplusScrollToTopManager: setIsInWhiteList false
+02-28 14:39:14.921 30895 30895 D OplusViewDebugManager: OplusViewDebugManager Constructor android.view.debug.OplusViewDebugManager@98f3954 [mHasViewDebugProperty true] [mHasMsgDebugProperty false] [DEBUG false] [EXTRAINFOENABLE false] [LIGHT_OS false]
+02-28 14:39:14.927 30895 30895 W libc    : Access denied finding property "ro.odm.prev.product.name"
+02-28 14:39:14.928 30895 30895 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+02-28 14:39:14.928 30895 30895 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+02-28 14:39:15.001 30895 30895 D nativeloader: Configuring clns-9 for other apk /data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/lib/arm64:/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.foldersync.folder_sync
+02-28 14:39:15.004 30895 30895 I ync.folder_sync: AssetManager2(0xb40000754d953a28) locale list changing from [] to [en-GB]
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment: Currently set values for:
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[""]
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment:   angle_gl_driver_selection_values=[""]
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment: com.foldersync.folder_sync is not listed in per-application setting
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment: ANGLE allowlist from config: 
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment: com.foldersync.folder_sync is not listed in ANGLE allowlist or settings, returning default
+02-28 14:39:15.008 30895 30895 V GraphicsEnvironment: Updatable production driver is not supported on the device.
+02-28 14:39:15.009 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:-1
+02-28 14:39:15.014 30895 30895 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+02-28 14:39:15.029 30895 30895 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+02-28 14:39:15.029 30895 30895 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+02-28 14:39:15.045 30895 30895 D OplusGraphicsEvent: OplusGraphicsEventListener create now!
+02-28 14:39:15.045 30895 30895 D OplusGraphicsEvent: addEventListener success!
+02-28 14:39:15.047 30895 30895 E [UAH_CLIENT]: uahInit enter
+02-28 14:39:15.047 30895 30895 W ync.folder_sync: AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+02-28 14:39:15.048 30895 30895 I [UAH_CLIENT]: UahGetFeatureStatus enter
+02-28 14:39:15.057 30895 30895 I HWUI    : SupportApps size 0
+02-28 14:39:15.057 30895 30895 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+02-28 14:39:15.057 30895 30895 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+02-28 14:39:15.058 30895 30895 E SchedAssist: open sharedFd failed with error=Permission denied
+02-28 14:39:15.058 30895 30895 E SchedAssist: open sharedFd failed with error=Permission denied
+02-28 14:39:15.058 30895 30895 E SchedAssist: open sharedFd failed with error=Permission denied
+02-28 14:39:15.058 30895 30895 E SchedAssist: open sharedFd failed with error=Permission denied
+02-28 14:39:15.058 30895 31094 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+02-28 14:39:15.058 30895 31094 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+02-28 14:39:15.059 30895 31094 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+02-28 14:39:15.060 30895 30895 I ync.folder_sync: AssetManager2(0xb400007509e8e328) locale list changing from [] to [en-GB]
+02-28 14:39:15.060 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:0
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: QUALCOMM build                   : 8924aaec70, I7b07ce2793
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Build Date                       : 07/16/25
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.45.02.26
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Local Branch                     : 
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.948
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Remote Branch                    : NONE
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Build Config                     : S P 16.1.2 AArch64
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Driver Version                   : 0762.40
+02-28 14:39:15.061 30895 31094 I AdrenoGLES-0: Process Name                     : com.foldersync.folder_sync
+02-28 14:39:15.068 30895 31094 I AdrenoGLES-0: PFP: 0x01520181, ME: 0x01520023
+02-28 14:39:15.071 30895 31094 I AdrenoUtils: <ReadGpuID:357>: Reading chip ID through GSL
+02-28 14:39:15.077 30895 31094 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+02-28 14:39:15.077 30895 31094 D ExtensionsLoader: Opened libeglextimpl.so
+02-28 14:39:15.077 30895 31094 D PreCache: [IPreCacheRus]loadRUSConfigs#102 failed to transact: -22 prc:com.foldersync.folder_sync
+02-28 14:39:15.079 30895 31084 D WM-ForceStopRunnable: The default process name was not specified.
+02-28 14:39:15.080 30895 31084 D WM-ForceStopRunnable: Performing cleanup operations.
+02-28 14:39:15.091 30895 30895 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+02-28 14:39:15.095 30895 30895 E OplusPredictiveBackController:  NoSuchMethodException 
+02-28 14:39:15.095 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:39:15.095 30895 30895 D OplusPredictiveBackController: initPredictiveBackConfig for com.foldersync.folder_sync.MainActivity@bb72ca1 initPredictiveBackConfig mShouldInterceptKeyEvent false
+02-28 14:39:15.095 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:39:15.100 30895 31104 D FlutterJNI: Beginning load of flutter...
+02-28 14:39:15.111 30895 31105 I ResourceExtractor: Found extracted resources res_timestamp-1-1772269512653
+02-28 14:39:15.111 30895 31105 I ResourceExtractor: Resource version mismatch res_timestamp-1-1772269753983
+02-28 14:39:15.111 30895 31104 D nativeloader: Load /data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk!/lib/arm64-v8a/libflutter.so using class loader ns clns-9 (caller=/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk): ok
+02-28 14:39:15.112 30895 31104 D FlutterJNI: flutter (null) was loaded normally!
+02-28 14:39:15.190 30895 31084 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+02-28 14:39:15.596 30895 31105 I ResourceExtractor: Extracted baseline resource assets/flutter_assets/kernel_blob.bin
+02-28 14:39:15.597 30895 31105 I ResourceExtractor: Extracted baseline resource assets/flutter_assets/vm_snapshot_data
+02-28 14:39:15.654 30895 31105 I ResourceExtractor: Extracted baseline resource assets/flutter_assets/isolate_snapshot_data
+02-28 14:39:15.667 30895 30895 I ync.folder_sync: AssetManager2(0xb400007509e8e628) locale list changing from [] to [en-GB]
+02-28 14:39:15.684 30895 30895 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+02-28 14:39:15.840 30895 31523 I flutter : The Dart VM service is listening on http://127.0.0.1:45095/JqyYFt0BCaA=/
+02-28 14:39:15.867 30895 31410 D colorx  : VulkanExtImpl Init
+02-28 14:39:15.868 30895 31410 D vulkan  : searching for layers in '/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/lib/arm64'
+02-28 14:39:15.868 30895 31410 D vulkan  : searching for layers in '/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk!/lib/arm64-v8a'
+02-28 14:39:15.872 30895 31410 D vulkan  : added global layer 'VK_LAYER_KHRONOS_validation' from library '/data/app/~~mBgNRtynDj7qmL6DIS8lJg==/com.foldersync.folder_sync-pyTpr8UvKdwlhGgXr6FOkQ==/base.apk!/lib/arm64-v8a/libVkLayer_khronos_validation.so'
+02-28 14:39:15.873 30895 30895 I oplus.android.OplusFrameworkFactoryImpl: Unknow feature:IOplusTextViewRTLUtilForUG
+02-28 14:39:15.873 30895 31410 D colorx  : I can't find colorx layer , let's enumerate colorx layers first.
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: updateDebugToClass InputMethodManager.DEBUG = false
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: updateDebugToClass ImeFocusController.DEBUG = false
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: updateDebugToClass OnBackInvokedDispatcher.DEBUG = false
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: updateDebugToClass InsetsController.DEBUG = false
+02-28 14:39:15.879 30895 30895 D OplusInputMethodUtil: updateDebugToClass BaseInputConnection.DEBUG = false
+02-28 14:39:15.880 30895 31410 I AdrenoVK-0: ===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+02-28 14:39:15.880 30895 31410 I AdrenoVK-0: ===== END DUMP OF OVERRIDDEN SETTINGS =====
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: QUALCOMM build          : 8924aaec70, I7b07ce2793
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Build Date              : 07/16/25
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Shader Compiler Version : E031.45.02.26
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Local Branch            : 
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Remote Branch           : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.973.948
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Remote Branch           : NONE
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Reconstruct Branch      : NOTHING
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Build Config            : S P 16.1.2 AArch64
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Driver Path             : /vendor/lib64/hw/vulkan.adreno.so
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Driver Version          : 0762.40
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: PFP                     : 0x01520181
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: ME                      : 0x01520023
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Application Name    : Impeller
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Application Version : 0x00800000
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Engine Name         : Impeller
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Engine Version      : 0x00400000
+02-28 14:39:15.888 30895 31410 I AdrenoVK-0: Api Version         : 0x00401000
+02-28 14:39:15.889 30895 30895 I ync.folder_sync: hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityNodeInfo;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported,test-api) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+02-28 14:39:15.889 30895 30895 I ync.folder_sync: hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityRecord;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+02-28 14:39:15.889 30895 30895 I ync.folder_sync: hiddenapi: Accessing hidden field Landroid/view/accessibility/AccessibilityNodeInfo;->mChildNodeIds:Landroid/util/LongArray; (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+02-28 14:39:15.889 30895 30895 I ync.folder_sync: hiddenapi: Accessing hidden method Landroid/util/LongArray;->get(I)J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+02-28 14:39:15.895 30895 30895 D FlutterRenderer: Width is zero. 0,0
+02-28 14:39:15.901 30895 30895 D CompatChangeReporter: Compat change id reported: 377864165; UID 10373; state: ENABLED
+02-28 14:39:15.902 30895 31410 I flutter : [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+02-28 14:39:15.904 30895 30895 D ActivityThread: ComponentInfo{com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity} checkFinished=false 2
+02-28 14:39:15.904 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:0
+02-28 14:39:15.905 30895 30895 V AutofillClientController: onActivityResumed()
+02-28 14:39:15.905 30895 30895 V AutofillClientController: onActivityPostResumed()
+02-28 14:39:15.905 30895 30895 V AutofillClientController: onActivityPostResumed(): Relayout fix enabled
+02-28 14:39:15.905 30895 30895 V AutofillClientController: forResume(): Not attempting refill.
+02-28 14:39:15.909 30895 30895 D WindowManager: Add to mViews: com.android.internal.policy.DecorView{3004e0d I.E...... R.....ID 0,0-0,0 alpha=1.0 viewInfo = }[MainActivity],pkg= com.foldersync.folder_sync
+02-28 14:39:15.910 30895 31094 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+02-28 14:39:15.911 30895 31094 D ExtensionsLoader: Opened libhwuiextimpl.so
+02-28 14:39:15.912 30895 31094 D skia    : setRusSupported enable 0
+02-28 14:39:15.919 30895 30895 D ViewRootImplExtImpl: onDisplayChanged -1 for VRI android.view.ViewRootImpl@a70be09
+02-28 14:39:15.979 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:0
+02-28 14:39:15.995 30895 30895 I Choreographer: Skipped 113 frames!  The application may be doing too much work on its main thread.
+02-28 14:39:15.996 30895 30895 E OplusBracketLog: [OplusViewMirrorManager] updateHostViewRootIfNeeded, not support android.view.ViewRootImpl@a70be09
+02-28 14:39:15.999 30895 30895 I WindowExtensionsImpl: Initializing Window Extensions, vendor API level=9, activity embedding enabled=true
+02-28 14:39:16.002 30895 30895 I SurfaceView: 94382448 onAttachedToWindow
+02-28 14:39:16.003 30895 30895 D FlutterRenderer: Width is zero. 0,0
+02-28 14:39:16.003 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:39:16.004 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=0, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660944384, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:39:16.009 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:true, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(0, 0), mWidth:-1, mHeight:-1, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:39:16.009 30895 30895 W VRI[MainActivity]: updateBlastSurfaceIfNeeded, surfaceSize:Point(1440, 3168), lastSurfaceSize:Point(0, 0), format:-3, blastBufferQueue:null
+02-28 14:39:16.009 30895 30895 D BufferQueueConsumer: [](id:78af00000000,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:39:16.009 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#0(BLAST Consumer)0](id:78af00000000,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:39:16.010 30895 31094 D HWUI    : createSurface new attribs array
+02-28 14:39:16.011 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:39:16.011 30895 31094 D libEGL  : this is from skia gles
+02-28 14:39:16.011 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#0(BLAST Consumer)0](id:78af00000000,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:39:16.017 30895 30895 D SurfaceView: 94382448, SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity], layerid: 14376 createBlastSurfaceControls
+02-28 14:39:16.018 30895 30895 D BufferQueueConsumer: [](id:78af00000001,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:39:16.019 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1(BLAST Consumer)1](id:78af00000001,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:39:16.021 30895 30895 D Dolphin : [App: ST:1, STM:0, STD:1]
+02-28 14:39:16.021 30895 30895 I SurfaceView: 94382448 visibleChanged -- surfaceCreated 
+02-28 14:39:16.021 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1(BLAST Consumer)1](id:78af00000001,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:39:16.022 30895 31410 D Surface : Surface::dispatchSetGameApi
+02-28 14:39:16.022 30895 31410 D Surface : dispatchSetGameApi pid[30895] tid[31410] GameApi[1]
+02-28 14:39:16.022 30895 31410 D Surface : dispatchSetGameApi res:0
+02-28 14:39:16.022 30895 31410 D vulkan  : set game api vulkan successfully
+02-28 14:39:16.022 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getBufferCacheFlag 0
+02-28 14:39:16.022 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getMaxAcquireBufferCount 2
+02-28 14:39:16.022 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getOrignalMaxAcquireBufferCount 2
+02-28 14:39:16.023 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:39:16.023 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:39:16.023 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:39:16.023 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:39:16.023 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:39:16.023 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:39:16.023 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:39:16.023 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:39:16.023 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:39:16.023 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:39:16.023 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getBufferCacheFlag 0
+02-28 14:39:16.023 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getMaxAcquireBufferCount 2
+02-28 14:39:16.023 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1 getOrignalMaxAcquireBufferCount 2
+02-28 14:39:16.036 30895 30895 D SurfaceView: 94382448 handleSyncNoBuffer
+02-28 14:39:16.037 30895 30895 W VRI[MainActivity]: performTraversals: cancelAndRedraw, mLastPerformTraversalsSkipDrawReasonpredraw_io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$2
+02-28 14:39:16.046 30895 30895 W VRI[MainActivity]: performTraversals: cancelAndRedraw, mLastPerformTraversalsSkipDrawReasonpredraw_io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$2
+02-28 14:39:16.047 30895 30895 W VRI[MainActivity]: handleResized, msg:, frameChanged:false, configChanged:false, displayChanged:false, attachedFrameChanged:false, compatScaleChanged:false, pendingDragResizing=false
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: initFrameRateConfig: 
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: 	levelsFor120hz: [120, 60]
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: 	thresholdsFor120hz: [200]
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: 	levelsFor90hz: [90]
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: 	thresholdsFor90hz: []
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [FRTCConfigManager]: FRTCConfigManager: FRTC_CAPABILITY = 120, package name = com.foldersync.folder_sync, WINDOW_ANIMATION_SPEED_RATE = 10, SCROLL_ANIMATION_SPEED_RATE = 20, PACKAGE_ENABLE = true
+02-28 14:39:16.049 30895 30895 I DynamicFramerate [DynamicFrameRateController]: init info: mPackageName = com.foldersync.folder_sync, mIsEnabled = true
+02-28 14:39:16.051 30895 30895 D WindowLayoutComponentImpl: app addWindowLayoutInfoListener activity:com.foldersync.folder_sync.MainActivity@bb72ca1 consumer :androidx.window.layout.adapter.extensions.MulticastConsumer@3366c9c
+02-28 14:39:16.051 30895 30895 D WindowLayoutComponentImpl: Register WindowLayoutInfoListener on Context=com.foldersync.folder_sync.MainActivity@bb72ca1, of which baseContext=android.app.ContextImpl@febf6a5
+02-28 14:39:16.054 30895 30895 W VRI[MainActivity]: performTraversals: cancelAndRedraw, mLastPerformTraversalsSkipDrawReasonpredraw_io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$2
+02-28 14:39:16.054 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:39:16.062 30895 30895 W VRI[MainActivity]: performTraversals: cancelAndRedraw, mLastPerformTraversalsSkipDrawReasonpredraw_io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$2
+02-28 14:39:16.548 30895 30942 I ync.folder_sync: Compiler allocated 7207KB to compile void android.view.ViewRootImpl.performTraversals()
+02-28 14:39:16.570 30895 31410 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67780427075652(auto) mPendingTransactions.size=0 graphicBufferId=132693014609932 transform=0
+02-28 14:39:16.657 30895 30895 D SurfaceView: 94382448 finishedDrawing
+02-28 14:39:16.657 30895 30895 D SurfaceView: 94382448 performDrawFinished mAttachedToWindow true
+02-28 14:39:16.662 30895 30895 I Choreographer: Skipped 71 frames!  The application may be doing too much work on its main thread.
+02-28 14:39:16.663 30895 30895 I SurfaceControl:  setExtendedRangeBrightness sc=Surface(name=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity)/@0xdd3555d,currentBufferRatio=1.0,desiredRatio=1.0
+02-28 14:39:16.663 30895 30895 D SurfaceView: 94382448 dispatchDraw mDrawFinished true isAboveParent false (mPrivateFlags & PFLAG_SKIP_DRAW) 128
+02-28 14:39:16.663 30895 30895 D SurfaceView: 94382448 clearSurfaceViewPort mCornerRadius 0.0
+02-28 14:39:16.673 30895 31094 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67780531220184(auto) mPendingTransactions.size=0 graphicBufferId=132693014609937 transform=0
+02-28 14:39:16.673 30895 31094 D VRI[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+02-28 14:39:16.674 30895 31094 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+02-28 14:39:16.674 30895 31094 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+02-28 14:39:16.674 30895 30895 D VRI[MainActivity]: draw finished. seqId=0
+02-28 14:39:16.722 30895 30895 D VRI[MainActivity]: onFocusEvent true
+02-28 14:39:16.732 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=true, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:39:16.732 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:false, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][1440,3168]}, relayoutAsync:true, mSyncSeqId:0
+02-28 14:39:16.732 30895 30895 W VRI[MainActivity]: updateBlastSurfaceIfNeeded, surfaceSize:Point(1440, 3168), lastSurfaceSize:Point(1440, 3168), format:-3, blastBufferQueue:android.graphics.BLASTBufferQueue@4e8762a
+02-28 14:39:16.732 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:39:16.737 30895 30895 D InsetsController: hide(ime(), fromIme=false)
+02-28 14:39:16.737 30895 30895 I ImeTracker: com.foldersync.folder_sync:7840bf31: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+02-28 14:39:17.095 30895 30895 I flutter : FINE: 2026-02-28 14:39:17.093813: [DRIVE] Fetching storage quota...
+02-28 14:39:17.277 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:39:17.277 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:39:17.278 30895 30895 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=io.flutter.embedding.android.FlutterActivity$1@9192393
+02-28 14:39:17.739 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d V.E...... R....... 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to true
+02-28 14:39:17.904 30895 30895 I flutter : FINE: 2026-02-28 14:39:17.904101: [DRIVE] Quota fetched successfully (106988066085B used of 2199023255552B limit)
+02-28 14:39:21.476 30895   445 D ProfileInstaller: Installing profile for com.foldersync.folder_sync
+02-28 14:39:30.399 30895 31742 D VRI[MainActivity]: dispatchAppVisibility visible:false mUpcomingWindowFocus:true
+02-28 14:39:30.401 30895 30895 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
+02-28 14:39:30.408 30895 30895 I SurfaceView: 94382448 surfaceDestroyed
+02-28 14:39:30.410 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1(BLAST Consumer)1](id:78af00000001,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:39:30.410 30895 30895 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1(BLAST Consumer)1](id:78af00000001,api:0,p:-1,c:30895) disconnect: api -1
+02-28 14:39:30.411 30895 30895 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1](f:0,a:2) destructor()
+02-28 14:39:30.411 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#1(BLAST Consumer)1](id:78af00000001,api:0,p:-1,c:30895) disconnect
+02-28 14:39:30.416 30895 31094 D SurfaceView: 83811750positionLost mSurfaceControl is null return;
+02-28 14:39:30.416 30895 30895 D HWUI    : RenderProxy::destroy: this=0xb400007509e90400, mContext=0xb40000748d56a580
+02-28 14:39:30.416 30895 31094 D HWUI    : SkiaOpenGLPipeline::setSurface: this=0xb40000748d4c8a40, surface=NULL
+02-28 14:39:30.417 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#0(BLAST Consumer)0](id:78af00000000,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:39:30.417 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:39:30.422 30895 30943 W ync.folder_sync: userfaultfd: MOVE ioctl seems unsupported: Connection timed out
+02-28 14:39:30.446 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:false, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:39:30.452 30895 30895 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) destructor()
+02-28 14:39:30.452 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#0(BLAST Consumer)0](id:78af00000000,api:0,p:-1,c:30895) disconnect
+02-28 14:39:30.498 30895 30895 D VRI[MainActivity]: onFocusEvent false
+02-28 14:39:30.499 30895 30895 D VRI[MainActivity]: setWindowStopped stopped:true
+02-28 14:39:31.514 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d I.E...... R.....ID 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to false
+02-28 14:40:02.428 30895 31742 D VRI[MainActivity]: dispatchAppVisibility visible:true mUpcomingWindowFocus:false
+02-28 14:40:02.440 30895 30895 D VRI[MainActivity]: setWindowStopped stopped:false
+02-28 14:40:02.440 30895 30895 D ViewRootImpl: Skipping stats log for color mode
+02-28 14:40:02.441 30895 30895 D ActivityThread: ComponentInfo{com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity} checkFinished=false 2
+02-28 14:40:02.441 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:0
+02-28 14:40:02.441 30895 30895 V AutofillClientController: onActivityResumed()
+02-28 14:40:02.442 30895 30895 V AutofillClientController: onActivityPostResumed()
+02-28 14:40:02.442 30895 30895 V AutofillClientController: onActivityPostResumed(): Relayout fix enabled
+02-28 14:40:02.442 30895 30895 V AutofillClientController: forResume(): Not attempting refill.
+02-28 14:40:02.443 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:40:02.448 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:40:02.448 30895 30895 W VRI[MainActivity]: updateBlastSurfaceIfNeeded, surfaceSize:Point(1440, 3168), lastSurfaceSize:Point(1440, 3168), format:-3, blastBufferQueue:null
+02-28 14:40:02.449 30895 30895 D BufferQueueConsumer: [](id:78af00000002,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:40:02.449 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#2(BLAST Consumer)2](id:78af00000002,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:40:02.450 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:02.450 30895 31094 D HWUI    : createSurface new attribs array
+02-28 14:40:02.450 30895 31094 D libEGL  : this is from skia gles
+02-28 14:40:02.450 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#2(BLAST Consumer)2](id:78af00000002,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:40:02.453 30895 30895 D SurfaceView: 94382448, SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity], layerid: 14401 createBlastSurfaceControls
+02-28 14:40:02.453 30895 30895 D BufferQueueConsumer: [](id:78af00000003,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:40:02.453 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3(BLAST Consumer)3](id:78af00000003,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:40:02.453 30895 30895 I SurfaceView: 94382448 visibleChanged -- surfaceCreated 
+02-28 14:40:02.473 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3(BLAST Consumer)3](id:78af00000003,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:40:02.473 30895 31410 D Surface : Surface::dispatchSetGameApi
+02-28 14:40:02.473 30895 31410 D Surface : dispatchSetGameApi pid[30895] tid[31410] GameApi[1]
+02-28 14:40:02.477 30895 31410 D Surface : dispatchSetGameApi res:0
+02-28 14:40:02.482 30895 31410 D vulkan  : set game api vulkan successfully
+02-28 14:40:02.482 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getBufferCacheFlag 0
+02-28 14:40:02.485 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getMaxAcquireBufferCount 2
+02-28 14:40:02.486 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getOrignalMaxAcquireBufferCount 2
+02-28 14:40:02.486 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:40:02.486 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:40:02.486 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:40:02.491 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:40:02.491 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:40:02.491 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:40:02.491 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:40:02.491 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:40:02.491 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:40:02.491 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:40:02.491 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getBufferCacheFlag 0
+02-28 14:40:02.491 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getMaxAcquireBufferCount 2
+02-28 14:40:02.491 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3 getOrignalMaxAcquireBufferCount 2
+02-28 14:40:02.510 30895 30895 D SurfaceView: 94382448 handleSyncNoBuffer
+02-28 14:40:02.510 30895 30895 I SurfaceControl:  setExtendedRangeBrightness sc=Surface(name=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity)/@0xdd3555d,currentBufferRatio=1.0,desiredRatio=1.0
+02-28 14:40:02.510 30895 30895 D SurfaceView: 94382448 dispatchDraw mDrawFinished true isAboveParent false (mPrivateFlags & PFLAG_SKIP_DRAW) 128
+02-28 14:40:02.510 30895 30895 D SurfaceView: 94382448 clearSurfaceViewPort mCornerRadius 0.0
+02-28 14:40:02.519 30895 31094 D BLASTBufferQueue: [VRI[MainActivity]#2](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67826376540895(auto) mPendingTransactions.size=0 graphicBufferId=132693014609955 transform=0
+02-28 14:40:02.519 30895 31094 D VRI[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+02-28 14:40:02.521 30895 30895 D InsetsController: setRequestedVisibleTypes, mRequestedVisibleTypes: statusBars navigationBars captionBar systemGestures mandatorySystemGestures tappableElement displayCutout windowDecor systemOverlays, requestedVisibleTypes: statusBars navigationBars captionBar systemGestures mandatorySystemGestures tappableElement displayCutout windowDecor systemOverlays, visibleTypes: navigationBars, type: 2, call: android.view.InsetsController.controlAnimationUnchecked:1556 android.view.InsetsController.applyAnimation:2378 android.view.InsetsController.applyAnimation:2344 android.view.InsetsController.onControlsChanged:1176 android.view.ViewRootImpl.onActiveControlsChanged:2690 android.view.ViewRootImpl.handleInsetsControlChanged:2644 android.view.ViewRootImpl$W.insetsControlChanged:13164 android.app.servertransaction.WindowStateInsetsControlChangeItem.execute:85 android.app.servertransaction.WindowStateTransactionItem.execute:62 android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem:138 
+02-28 14:40:02.522 30895 30895 W VRI[MainActivity]: handleResized, msg:, frameChanged:false, configChanged:false, displayChanged:false, attachedFrameChanged:false, compatScaleChanged:false, pendingDragResizing=false
+02-28 14:40:02.526 30895 30895 D OplusWindowManager: get WMS extension: android.os.BinderProxy@aca092c
+02-28 14:40:02.533 30895 31094 D VRI[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=2 didProduceBuffer=true syncBuffer=false
+02-28 14:40:02.533 30895 30895 D VRI[MainActivity]: draw finished. seqId=0
+02-28 14:40:02.541 30895 31410 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67826399734281(auto) mPendingTransactions.size=0 graphicBufferId=132693014609950 transform=0
+02-28 14:40:02.543 30895 30895 D VRI[MainActivity]: draw finished. seqId=0
+02-28 14:40:02.543 30895 30895 D SurfaceView: 94382448 finishedDrawing
+02-28 14:40:02.543 30895 30895 D SurfaceView: 94382448 performDrawFinished mAttachedToWindow true
+02-28 14:40:02.549 30895 30895 D SurfaceView: 94382448 dispatchDraw mDrawFinished true isAboveParent false (mPrivateFlags & PFLAG_SKIP_DRAW) 128
+02-28 14:40:02.549 30895 30895 D SurfaceView: 94382448 clearSurfaceViewPort mCornerRadius 0.0
+02-28 14:40:02.567 30895 30895 D VRI[MainActivity]: onFocusEvent true
+02-28 14:40:02.573 30895 30895 D InsetsController: hide(ime(), fromIme=false)
+02-28 14:40:02.573 30895 30895 I ImeTracker: com.foldersync.folder_sync:72bfc37f: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+02-28 14:40:02.635 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67826493, mIsMoving = true, mUpdated = true
+02-28 14:40:02.635 30895 30895 E IJankManager: slideSceneEnd unknown scene 1000 mScene:-1
+02-28 14:40:02.636 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:02.638 30895 30895 D OplusSystemUINavigationGestureExtImpl: regionString = null
+02-28 14:40:02.638 30895 30895 D ViewExtract: [OplusViewExtractManager] OplusViewExtractManager init com.foldersync.folder_sync
+02-28 14:40:02.673 30895 31644 D OplusSystemUINavigationGestureExtImpl: regionString = null
+02-28 14:40:02.793 30895 30895 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.foldersync.folder_sync
+02-28 14:40:02.794 30895 30895 D InsetsController: setRequestedVisibleTypes, mRequestedVisibleTypes: statusBars navigationBars captionBar systemGestures mandatorySystemGestures tappableElement displayCutout windowDecor systemOverlays, requestedVisibleTypes: statusBars navigationBars captionBar systemGestures mandatorySystemGestures tappableElement displayCutout windowDecor systemOverlays, visibleTypes: navigationBars, type: 2, call: android.view.InsetsController.notifyFinished:1966 android.view.InsetsAnimationControlImpl.applyChangeInsets:385 android.view.InsetsController.lambda$new$3:936 android.view.InsetsController.$r8$lambda$meqKUiuVHZJFS86fhQQzBBmdABw:0 android.view.InsetsController$$ExternalSyntheticLambda10.run:0 android.view.Choreographer$CallbackRecord.run:1852 android.view.Choreographer$CallbackRecord.run:1861 android.view.Choreographer.doCallbacks:1373 android.view.Choreographer.doFrame:1227 android.view.Choreographer$FrameDisplayEventReceiver.run:1835 
+02-28 14:40:02.796 30895 30895 D OplusInputMethodManagerInternal: get inputMethodManager extension: com.android.internal.view.IInputMethodManager$Stub$Proxy@fd4c630
+02-28 14:40:02.796 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67826654, mIsMoving = false, mUpdated = true
+02-28 14:40:02.797 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:02.797 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:03.572 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d V.E...... R....... 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to true
+02-28 14:40:04.118 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67827976, mIsMoving = true, mUpdated = true
+02-28 14:40:04.118 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:04.118 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:04.275 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67828133, mIsMoving = false, mUpdated = true
+02-28 14:40:04.275 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:04.275 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:04.587 30895 30895 I ync.folder_sync: AssetManager2(0xb400007509e90a28) locale list changing from [] to [en-GB]
+02-28 14:40:04.600 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e293aa28) locale list changing from [] to [en-GB]
+02-28 14:40:04.606 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e293ad28) locale list changing from [] to [en-GB]
+02-28 14:40:04.618 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e2e4f028) locale list changing from [] to [en-GB]
+02-28 14:40:04.638 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e293a728) locale list changing from [] to [en-GB]
+02-28 14:40:04.642 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e2e4f928) locale list changing from [] to [en-GB]
+02-28 14:40:04.645 30895 30895 I ync.folder_sync: AssetManager2(0xb4000072e2e4f628) locale list changing from [] to [en-GB]
+02-28 14:40:04.690 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:40:04.690 30895 30895 D OplusPredictiveBackController: should not HookOnBackInvokedCallbackEnabled for application com.foldersync.folder_sync.MainActivity@bb72ca1 sdk: 36
+02-28 14:40:06.862 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67830720, mIsMoving = true, mUpdated = true
+02-28 14:40:06.863 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:06.863 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:06.980 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67830839, mIsMoving = false, mUpdated = true
+02-28 14:40:06.981 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:06.983 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:07.007 30895 30895 I flutter : FINE: 2026-02-28 14:40:07.007363: [DRIVE] listFolders called with parentId: null
+02-28 14:40:07.007 30895 30895 I flutter : FINE: 2026-02-28 14:40:07.007660: [DRIVE] Executing files.list with query: trashed=false and 'root' in parents
+02-28 14:40:07.656 30895 30895 I flutter : FINE: 2026-02-28 14:40:07.656323: [DRIVE] Found 60 folders
+02-28 14:40:10.741 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67834599, mIsMoving = true, mUpdated = true
+02-28 14:40:10.742 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:10.742 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:10.867 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67834725, mIsMoving = false, mUpdated = true
+02-28 14:40:10.867 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:10.867 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:10.878 30895 30895 I flutter : FINE: 2026-02-28 14:40:10.878803: [DRIVE] listFolders called with parentId: 1r0bS-qr96Uad4Zt50-1rX_juvmSznN6o
+02-28 14:40:10.879 30895 30895 I flutter : FINE: 2026-02-28 14:40:10.879045: [DRIVE] Executing files.list with query: trashed=false and '1r0bS-qr96Uad4Zt50-1rX_juvmSznN6o' in parents
+02-28 14:40:10.908 30895 31410 D Dolphin : SurfaceFlinger: Smart touch debug: set desiredPresentTime for this frame.
+02-28 14:40:11.441 30895 30895 I flutter : FINE: 2026-02-28 14:40:11.441798: [DRIVE] Found 0 folders
+02-28 14:40:12.063 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67835922, mIsMoving = true, mUpdated = true
+02-28 14:40:12.064 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:12.064 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:12.088 30895 31410 D Dolphin : SurfaceFlinger: Smart touch debug: set desiredPresentTime for this frame.
+02-28 14:40:12.202 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67836060, mIsMoving = false, mUpdated = true
+02-28 14:40:12.203 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:12.203 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:13.073 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67836931, mIsMoving = true, mUpdated = true
+02-28 14:40:13.073 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:13.073 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:13.189 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67837047, mIsMoving = false, mUpdated = true
+02-28 14:40:13.190 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:13.191 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:13.195 30895 30895 I flutter : FINE: 2026-02-28 14:40:13.195384: [AddTaskScreen] Launching native local folder picker
+02-28 14:40:13.236 30895 31410 D Dolphin : SurfaceFlinger: Smart touch debug: set desiredPresentTime for this frame.
+02-28 14:40:13.238 30895 30895 D VRI[MainActivity]: onFocusEvent false
+02-28 14:40:13.632 30895 30949 D VRI[MainActivity]: dispatchAppVisibility visible:false mUpcomingWindowFocus:false
+02-28 14:40:13.632 30895 30895 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
+02-28 14:40:13.637 30895 30895 I SurfaceView: 94382448 surfaceDestroyed
+02-28 14:40:13.639 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3(BLAST Consumer)3](id:78af00000003,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:40:13.640 30895 30895 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3(BLAST Consumer)3](id:78af00000003,api:0,p:-1,c:30895) disconnect: api -1
+02-28 14:40:13.640 30895 30895 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3](f:0,a:1) destructor()
+02-28 14:40:13.640 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#3(BLAST Consumer)3](id:78af00000003,api:0,p:-1,c:30895) disconnect
+02-28 14:40:13.641 30895 31094 D SurfaceView: 43343082positionLost mSurfaceControl is null return;
+02-28 14:40:13.641 30895 30895 D HWUI    : RenderProxy::destroy: this=0xb400007509e90400, mContext=0xb40000748d56a580
+02-28 14:40:13.641 30895 31094 D HWUI    : SkiaOpenGLPipeline::setSurface: this=0xb40000748d4c8a40, surface=NULL
+02-28 14:40:13.641 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#2(BLAST Consumer)2](id:78af00000002,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:40:13.641 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:40:13.645 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:false, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:40:13.645 30895 30895 D BLASTBufferQueue: [VRI[MainActivity]#2](f:0,a:1) destructor()
+02-28 14:40:13.645 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#2(BLAST Consumer)2](id:78af00000002,api:0,p:-1,c:30895) disconnect
+02-28 14:40:13.654 30895 30895 D VRI[MainActivity]: setWindowStopped stopped:true
+02-28 14:40:14.242 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d I.E...... R.....ID 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to false
+02-28 14:40:17.088 30895 30949 D VRI[MainActivity]: dispatchAppVisibility visible:true mUpcomingWindowFocus:false
+02-28 14:40:17.094 30895 30895 D VRI[MainActivity]: setWindowStopped stopped:false
+02-28 14:40:17.095 30895 30895 D ViewRootImpl: Skipping stats log for color mode
+02-28 14:40:17.100 30895 30895 D ActivityThread: ComponentInfo{com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity} checkFinished=false 2
+02-28 14:40:17.101 30895 30895 D ResourcesManagerExtImpl: applyConfigurationToAppResourcesLocked app.getDisplayId() return callback.displayId:0
+02-28 14:40:17.101 30895 30895 V AutofillClientController: onActivityResumed()
+02-28 14:40:17.102 30895 30895 V AutofillClientController: onActivityPostResumed()
+02-28 14:40:17.102 30895 30895 V AutofillClientController: onActivityPostResumed(): Relayout fix enabled
+02-28 14:40:17.102 30895 30895 V AutofillClientController: forResume(): Not attempting refill.
+02-28 14:40:17.103 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:40:17.108 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:true, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:40:17.108 30895 30895 W VRI[MainActivity]: updateBlastSurfaceIfNeeded, surfaceSize:Point(1440, 3168), lastSurfaceSize:Point(1440, 3168), format:-3, blastBufferQueue:null
+02-28 14:40:17.108 30895 30895 D BufferQueueConsumer: [](id:78af00000004,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:40:17.109 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#4(BLAST Consumer)4](id:78af00000004,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:40:17.110 30895 31094 D HWUI    : createSurface new attribs array
+02-28 14:40:17.110 30895 31094 D libEGL  : this is from skia gles
+02-28 14:40:17.110 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#4(BLAST Consumer)4](id:78af00000004,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:40:17.111 30895 30895 D SurfaceView: 94382448, SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity], layerid: 14436 createBlastSurfaceControls
+02-28 14:40:17.112 30895 30895 D BufferQueueConsumer: [](id:78af00000005,api:0,p:-1,c:30895) connect: controlledByApp=false
+02-28 14:40:17.112 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5(BLAST Consumer)5](id:78af00000005,api:0,p:-1,c:30895) setMaxAcquiredBufferCount: 2
+02-28 14:40:17.112 30895 30895 I SurfaceView: 94382448 visibleChanged -- surfaceCreated 
+02-28 14:40:17.119 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5(BLAST Consumer)5](id:78af00000005,api:1,p:30895,c:30895) connect: api=1 producerControlledByApp=true
+02-28 14:40:17.119 30895 31410 D Surface : Surface::dispatchSetGameApi
+02-28 14:40:17.119 30895 31410 D Surface : dispatchSetGameApi pid[30895] tid[31410] GameApi[1]
+02-28 14:40:17.119 30895 31410 D Surface : dispatchSetGameApi res:0
+02-28 14:40:17.119 30895 31410 D vulkan  : set game api vulkan successfully
+02-28 14:40:17.119 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getBufferCacheFlag 0
+02-28 14:40:17.120 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getMaxAcquireBufferCount 2
+02-28 14:40:17.121 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getOrignalMaxAcquireBufferCount 2
+02-28 14:40:17.121 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:40:17.121 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:40:17.121 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:40:17.121 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:40:17.121 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:40:17.121 30895 31410 W qdgralloc: GetSize: Pixel format: 0x3b is not supported by gralloc
+02-28 14:40:17.121 30895 31410 W qdgralloc: gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+02-28 14:40:17.121 30895 31410 E Gralloc4: isSupported(1, 1, 59, 1, ...) failed with 7
+02-28 14:40:17.121 30895 31410 E GraphicBufferAllocator: Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 2
+02-28 14:40:17.121 30895 31410 E AHardwareBuffer: GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -2), handle=0x0
+02-28 14:40:17.121 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getBufferCacheFlag 0
+02-28 14:40:17.121 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getMaxAcquireBufferCount 2
+02-28 14:40:17.121 30895 31410 D BLASTBufferQueue: 5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5 getOrignalMaxAcquireBufferCount 2
+02-28 14:40:17.130 30895 30895 D SurfaceView: 94382448 handleSyncNoBuffer
+02-28 14:40:17.131 30895 30895 I SurfaceControl:  setExtendedRangeBrightness sc=Surface(name=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity)/@0xdd3555d,currentBufferRatio=1.0,desiredRatio=1.0
+02-28 14:40:17.131 30895 30895 D SurfaceView: 94382448 dispatchDraw mDrawFinished true isAboveParent false (mPrivateFlags & PFLAG_SKIP_DRAW) 128
+02-28 14:40:17.131 30895 30895 D SurfaceView: 94382448 clearSurfaceViewPort mCornerRadius 0.0
+02-28 14:40:17.135 30895 31094 D BLASTBufferQueue: [VRI[MainActivity]#4](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67840992174744(auto) mPendingTransactions.size=0 graphicBufferId=132693014609976 transform=0
+02-28 14:40:17.135 30895 31094 D VRI[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+02-28 14:40:17.137 30895 30895 I flutter : INFO: 2026-02-28 14:40:17.137628: [AddTaskScreen] User selected local folder: /storage/emulated/0/DriveSyncFiles
+02-28 14:40:17.143 30895 31410 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5](f:0,a:1) acquireNextBufferLocked size=1440x3168 mFrameNumber=1 applyTransaction=true mTimestamp=67841001667140(auto) mPendingTransactions.size=0 graphicBufferId=132693014609971 transform=0
+02-28 14:40:17.163 30895 30895 D VRI[MainActivity]: draw finished. seqId=0
+02-28 14:40:17.163 30895 30895 D SurfaceView: 94382448 finishedDrawing
+02-28 14:40:17.163 30895 30895 D SurfaceView: 94382448 performDrawFinished mAttachedToWindow true
+02-28 14:40:17.168 30895 30895 D SurfaceView: 94382448 dispatchDraw mDrawFinished true isAboveParent false (mPrivateFlags & PFLAG_SKIP_DRAW) 128
+02-28 14:40:17.168 30895 30895 D SurfaceView: 94382448 clearSurfaceViewPort mCornerRadius 0.0
+02-28 14:40:17.188 30895 30895 D VRI[MainActivity]: onFocusEvent true
+02-28 14:40:17.194 30895 30895 D InsetsController: hide(ime(), fromIme=false)
+02-28 14:40:17.194 30895 30895 I ImeTracker: com.foldersync.folder_sync:d6f83565: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+02-28 14:40:18.191 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d V.E...... R....... 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to true
+02-28 14:40:20.574 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67844432, mIsMoving = true, mUpdated = true
+02-28 14:40:20.575 30895 30895 E IJankManager: slideSceneEnd unknown scene 1000 mScene:-1
+02-28 14:40:20.575 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:20.826 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67844684, mIsMoving = false, mUpdated = true
+02-28 14:40:20.826 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:20.827 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:21.929 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67845787, mIsMoving = true, mUpdated = true
+02-28 14:40:21.929 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:21.929 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:21.994 30895 31410 D Dolphin : SurfaceFlinger: Smart touch debug: set desiredPresentTime for this frame.
+02-28 14:40:22.071 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67845929, mIsMoving = false, mUpdated = true
+02-28 14:40:22.071 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:22.071 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:22.595 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67846454, mIsMoving = true, mUpdated = true
+02-28 14:40:22.596 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:22.596 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:22.700 30895 31410 D Dolphin : SurfaceFlinger: Smart touch debug: set desiredPresentTime for this frame.
+02-28 14:40:22.814 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67846672, mIsMoving = false, mUpdated = true
+02-28 14:40:22.814 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:22.815 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:35.336 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67859194, mIsMoving = true, mUpdated = true
+02-28 14:40:35.337 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:35.337 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:35.466 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67859324, mIsMoving = false, mUpdated = true
+02-28 14:40:35.466 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:35.467 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:35.923 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67859781, mIsMoving = true, mUpdated = true
+02-28 14:40:35.924 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:36.051 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67859909, mIsMoving = false, mUpdated = true
+02-28 14:40:36.052 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:36.052 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:36.157 30895 30895 I ImeTracker: com.foldersync.folder_sync:21ff199a: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+02-28 14:40:36.168 30895 30895 D InsetsController: show(ime(), fromIme=false)
+02-28 14:40:36.168 30895 30895 D InsetsController: Setting requestedVisibleTypes to -1 (was -9)
+02-28 14:40:36.178 30895 30895 V AutofillManager: receiver results: flags=7 enabled=true, enabledForAugmentedOnly: false
+02-28 14:40:36.181 30895 30895 V AutofillManager: startSessionLocked(): id=1073741824:i631565627, bounds=Rect(126, 566 - 1314, 643), value=null, flags=0, state=UNKNOWN, compatMode=false, augmentedOnly=false, enabledAugmentedOnly=false, enteredIds=null
+02-28 14:40:36.196 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:36.199 30895 30895 I AssistStructure: Flattened final assist data: 520 bytes, containing 1 windows, 3 views
+02-28 14:40:36.281 30895 30895 D InputConnectionAdaptor: The input method toggled cursor monitoring on
+02-28 14:40:36.296 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:36.312 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:36.320 30895 30895 E DynamicFramerate [DynamicFrameRateManagerImpl]: setFrameRateInternalForWindow: TIMING_DO_WINDOW_ANIMATION request is = FrameRateRequest: {  mUniqueID = 54239691, mVelocity = -1, mPreviousFrameRate = 0, mBindWithSC = true, mSc = Surface(name=Surface(name=5d056c7 InputMethod)/@0x271641d - animation-leash of insets_animation)/@0x33ba1cb, mTransaction = android.view.SurfaceControl$Transaction@b1da066, Type = 20103 } , frameRate 120
+02-28 14:40:36.321 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.328 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.336 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.344 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.358 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.360 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.371 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.377 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.390 30895 30895 V AutofillManager: setSessionFinished(): from ACTIVE to FINISHED; autofillableIds=[1073741824:i631565627]
+02-28 14:40:36.391 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.395 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.404 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.410 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.421 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.427 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.437 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.444 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.455 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.460 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.471 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.476 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.485 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.498 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.501 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.515 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.518 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.526 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.536 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.544 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.555 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.559 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.570 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.576 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.586 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.593 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.606 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.609 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.622 30895 30895 E DynamicFramerate [DynamicFrameRateManagerImpl]: setFrameRateInternalForWindow: TIMING_DO_WINDOW_ANIMATION request is = FrameRateRequest: {  mUniqueID = 54239691, mVelocity = -2, mPreviousFrameRate = 120, mBindWithSC = true, mSc = Surface(name=Surface(name=5d056c7 InputMethod)/@0x271641d - animation-leash of insets_animation)/@0x33ba1cb, mTransaction = android.view.SurfaceControl$Transaction@b1da066, Type = 20103 } , frameRate 0
+02-28 14:40:36.623 30895 30895 I ImeTracker: com.foldersync.folder_sync:21ff199a: onShown
+02-28 14:40:36.624 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:36.624 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:37.864 30895 30895 V AutofillManager: notifyValueChanged(1073741824:631565627): ignoring on state FINISHED
+02-28 14:40:38.361 30895 30895 V AutofillManager: notifyValueChanged(1073741824:631565627): ignoring on state FINISHED
+02-28 14:40:38.566 30895 30895 V AutofillManager: notifyValueChanged(1073741824:631565627): ignoring on state FINISHED
+02-28 14:40:39.367 30895 30895 V AutofillManager: notifyViewExited(1073741824, 631565627
+02-28 14:40:39.369 30895 30895 I ImeTracker: com.foldersync.folder_sync:5246cda2: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+02-28 14:40:39.369 30895 30895 D InsetsController: hide(ime(), fromIme=false)
+02-28 14:40:39.369 30895 30895 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=ImeCallback=ImeOnBackInvokedCallback@97735709 hash=104256666 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@cb6563e
+02-28 14:40:39.369 30895 30895 D InsetsController: Setting requestedVisibleTypes to -9 (was -1)
+02-28 14:40:39.370 30895 30895 D CompatChangeReporter: Compat change id reported: 395521150; UID 10373; state: ENABLED
+02-28 14:40:39.383 30895 30895 E DynamicFramerate [DynamicFrameRateManagerImpl]: setFrameRateInternalForWindow: TIMING_DO_WINDOW_ANIMATION request is = FrameRateRequest: {  mUniqueID = 165530783, mVelocity = -1, mPreviousFrameRate = 0, mBindWithSC = true, mSc = Surface(name=Surface(name=5d056c7 InputMethod)/@0x271641d - animation-leash of insets_animation)/@0x9ddcc9f, mTransaction = android.view.SurfaceControl$Transaction@b1da066, Type = 20103 } , frameRate 120
+02-28 14:40:39.384 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.385 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:39.385 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.394 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.409 30895 30895 I ImeTracker: system_server:ce656ec6: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+02-28 14:40:39.410 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.424 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.427 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.438 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.443 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.456 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.460 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.473 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.477 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.489 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.493 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.518 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.529 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.535 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.545 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.551 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.561 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.568 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.578 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.584 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.594 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.601 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.631 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.634 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.648 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.651 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.665 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.667 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.679 30895 30895 E DynamicFramerate [DynamicFrameRateManagerImpl]: setFrameRateInternalForWindow: TIMING_DO_WINDOW_ANIMATION request is = FrameRateRequest: {  mUniqueID = 165530783, mVelocity = -2, mPreviousFrameRate = 120, mBindWithSC = true, mSc = Surface(name=Surface(name=5d056c7 InputMethod)/@0x271641d - animation-leash of insets_animation)/@0x9ddcc9f, mTransaction = android.view.SurfaceControl$Transaction@b1da066, Type = 20103 } , frameRate 0
+02-28 14:40:39.681 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.682 30895 30895 D FlutterJNI: Sending viewport metrics to the engine.
+02-28 14:40:39.700 30895 30895 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+02-28 14:40:39.717 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:39.724 30895 30895 W VRI[MainActivity]: handleResized abandoned!
+02-28 14:40:40.171 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67864028, mIsMoving = true, mUpdated = true
+02-28 14:40:40.171 30895 30895 E IJankManager: slideSceneEnd unknown scene 1003 mScene:-1
+02-28 14:40:40.171 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:40.380 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67864238, mIsMoving = false, mUpdated = true
+02-28 14:40:40.380 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:40.380 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:40.940 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 67864798, mIsMoving = true, mUpdated = true
+02-28 14:40:40.940 30895 30895 V AutofillManager: requestHideFillUi(null): anchor = null
+02-28 14:40:41.044 30895 30895 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 67864902, mIsMoving = false, mUpdated = true
+02-28 14:40:41.045 30895 30895 D OplusViewDragTouchViewHelper: dispatchTouchView action = 1
+02-28 14:40:41.046 30895 30895 D ViewRootImplExtImpl: the up motion event handled by client, just return
+02-28 14:40:41.067 30895 30895 I flutter : INFO: 2026-02-28 14:40:41.067725: [SYNC_TASK] Created task: yoo (1772269841054)
+02-28 14:40:41.131 30895 30895 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=io.flutter.embedding.android.FlutterActivity$1@9192393
+02-28 14:41:11.257 30895 31796 D VRI[MainActivity]: dispatchAppVisibility visible:false mUpcomingWindowFocus:true
+02-28 14:41:11.262 30895 30895 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
+02-28 14:41:11.265 30895 30895 I SurfaceView: 94382448 surfaceDestroyed
+02-28 14:41:11.278 30895 31410 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5(BLAST Consumer)5](id:78af00000005,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:41:11.279 30895 30895 D BufferQueueProducer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5(BLAST Consumer)5](id:78af00000005,api:0,p:-1,c:30895) disconnect: api -1
+02-28 14:41:11.279 30895 30895 D BLASTBufferQueue: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5](f:0,a:1) destructor()
+02-28 14:41:11.279 30895 30895 D BufferQueueConsumer: [5a02970 SurfaceView[com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity]#5(BLAST Consumer)5](id:78af00000005,api:0,p:-1,c:30895) disconnect
+02-28 14:41:11.281 30895 31094 D SurfaceView: 189067030positionLost mSurfaceControl is null return;
+02-28 14:41:11.282 30895 30895 D HWUI    : RenderProxy::destroy: this=0xb400007509e90400, mContext=0xb40000748d56a580
+02-28 14:41:11.283 30895 31094 D HWUI    : SkiaOpenGLPipeline::setSurface: this=0xb40000748d4c8a40, surface=NULL
+02-28 14:41:11.327 30895 31094 D BufferQueueProducer: [VRI[MainActivity]#4(BLAST Consumer)4](id:78af00000004,api:1,p:30895,c:30895) disconnect: api 1
+02-28 14:41:11.330 30895 30895 D ViewRootImplExtImpl: wrapConfigInfoIntoFlags rotation=0, smallestScreenWidthDp=411, residentWS=false, scenario=0, bounds=Rect(0, 0 - 1440, 3168), relayoutAsync=false, flags=0, newFlags=1660957536, title=com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity
+02-28 14:41:11.354 30895 30895 D VRI[MainActivity]: relayoutWindow result, sizeChanged:false, surfaceControlChanged:true, transformHintChanged:false, mSurfaceSize:Point(1440, 3168), mLastSurfaceSize:Point(1440, 3168), mWidth:1440, mHeight:3168, requestedWidth:1440, requestedHeight:3168, transformHint:0, installOrientation:0, displayRotation:0, isSurfaceValid:false, attr.flag:-2122252032, tmpFrames:ClientWindowFrames{frame=[0,0][1440,3168] display=[0,0][1440,3168] parentFrame=[0,0][0,0]}, relayoutAsync:false, mSyncSeqId:0
+02-28 14:41:11.367 30895 30895 D BLASTBufferQueue: [VRI[MainActivity]#4](f:0,a:1) destructor()
+02-28 14:41:11.367 30895 30895 D BufferQueueConsumer: [VRI[MainActivity]#4(BLAST Consumer)4](id:78af00000004,api:0,p:-1,c:30895) disconnect
+02-28 14:41:11.372 30895 30895 D VRI[MainActivity]: onFocusEvent false
+02-28 14:41:11.374 30895 30895 D VRI[MainActivity]: setWindowStopped stopped:true
+02-28 14:41:11.378 30895 30895 I AutofillManager: onInvisibleForAutofill(): expiringResponse
+02-28 14:41:11.378 30895 30895 V AutofillManager: updateSessionLocked(): id=null, bounds=null, value=null, action=5, flags=0
+02-28 14:41:12.386 30895 31644 D OplusScrollToTopManager: com.foldersync.folder_sync/com.foldersync.folder_sync.MainActivity,This com.android.internal.policy.DecorView{3004e0d I.E...... R.....ID 0,0-1440,3168 aid=0 alpha=1.0 viewInfo = }[MainActivity] change focus to false

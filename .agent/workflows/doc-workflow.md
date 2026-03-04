@@ -10,9 +10,21 @@ Before writing code for a new feature, follow this planning and documentation pr
 
 When starting a new feature, review the relevant Functional Requirements (FR) and Non-Functional Requirements (NFR).
 
-## 2. Draft Implementation Guide
+## 2. Create a Documentation Branch
 
-First, create a draft of the implementation guide as an **Artifact** (e.g., in the agent's brain directory like `implementation_plan.md` or a temporary markdown file).
+Create a new branch specifically for the documentation named `<feature_name>_doc` (e.g., `sync_engine_doc`).
+
+```bash
+git checkout main
+git pull
+mkdir -p wt
+git worktree add wt/<feature_name>_doc -b <feature_name>_doc
+cd wt/<feature_name>_doc
+```
+
+## 3. Draft Implementation Guide
+
+Create the draft of the implementation guide directly in the `docs/` folder on this new branch (e.g., `docs/FR_<number>_<feature_name>.md`).
 
 ## 3. Guide Structure
 
@@ -29,12 +41,13 @@ The draft implementation guide should include:
 
 Once the draft is written, use the **`notify_user`** tool to ask for an **Artifact Review**. Set `BlockedOnUser: true` to halt execution until the user (or Software Architect) approves the proposed architecture and plan.
 
-## 5. Finalize Implementation Guide
+## 5. Commit and Move to Feature Implementation
 
-After the review is approved, go ahead and create the final markdown file under the `docs/` folder in the workspace.
+After the review is approved, commit the newly created document to the `<feature_name>_doc` branch:
 
-- **Naming Convention**: Use the format `FR_<number>_feature_name.md`.
-  - Example: `docs/FR_3_google_drive_folder_picker.md`
-  - Multiple requirements: `docs/FR_1_NFR_2_dashboard.md`
+```bash
+git add docs/FR_<number>_<feature_name>.md
+git commit --no-gpg-sign -m "docs: add implementation guide for <feature_name>"
+```
 
-Once this final file is created and committed, proceed to the execution phase (creating the feature branch in `git-workflow.md`).
+Follow the PR process in `git-workflow.md` to merge this documentation branch into `main`. Once merged, you can proceed to create the actual feature implementation branch (e.g., `feat/<feature_name>`).
