@@ -1,26 +1,26 @@
-/// Represents a single file sync event in the history (FR-4).
+/// Represents a single sync execution summary in the history (FR-4).
 class SyncHistoryEntry {
   const SyncHistoryEntry({
     required this.id,
-    required this.fileName,
-    required this.taskName,
     required this.taskId,
+    required this.taskName,
     required this.timestamp,
     required this.status,
+    required this.filesSynced,
+    required this.totalFiles,
     this.errorMessage,
-    this.fileSize,
+    this.bytesTransferred,
   });
 
   final String id;
-  final String fileName;
-  final String taskName;
   final String taskId;
+  final String taskName;
   final DateTime timestamp;
   final SyncHistoryStatus status;
+  final int filesSynced;
+  final int totalFiles;
   final String? errorMessage;
-
-  /// File size in bytes, if available.
-  final int? fileSize;
+  final int? bytesTransferred;
 
   @override
   bool operator ==(Object other) =>
@@ -34,7 +34,7 @@ class SyncHistoryEntry {
 
   @override
   String toString() =>
-      'SyncHistoryEntry(file: $fileName, task: $taskName, status: $status)';
+      'SyncHistoryEntry(task: $taskName, files: $filesSynced/$totalFiles, status: $status)';
 }
 
 /// Status of a sync history entry.

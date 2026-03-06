@@ -6,74 +6,80 @@ import '../../domain/entities/sync_history_entry.dart';
 class SyncHistoryModel {
   const SyncHistoryModel({
     required this.id,
-    required this.fileName,
-    required this.taskName,
     required this.taskId,
+    required this.taskName,
     required this.timestamp,
     required this.status,
+    required this.filesSynced,
+    required this.totalFiles,
     this.errorMessage,
-    this.fileSize,
+    this.bytesTransferred,
   });
 
   final String id;
-  final String fileName;
-  final String taskName;
   final String taskId;
+  final String taskName;
   final DateTime timestamp;
   final String status;
+  final int filesSynced;
+  final int totalFiles;
   final String? errorMessage;
-  final int? fileSize;
+  final int? bytesTransferred;
 
   factory SyncHistoryModel.fromEntity(SyncHistoryEntry entry) {
     return SyncHistoryModel(
       id: entry.id,
-      fileName: entry.fileName,
-      taskName: entry.taskName,
       taskId: entry.taskId,
+      taskName: entry.taskName,
       timestamp: entry.timestamp,
       status: entry.status.name,
+      filesSynced: entry.filesSynced,
+      totalFiles: entry.totalFiles,
       errorMessage: entry.errorMessage,
-      fileSize: entry.fileSize,
+      bytesTransferred: entry.bytesTransferred,
     );
   }
 
   SyncHistoryEntry toEntity() {
     return SyncHistoryEntry(
       id: id,
-      fileName: fileName,
-      taskName: taskName,
       taskId: taskId,
+      taskName: taskName,
       timestamp: timestamp,
       status: SyncHistoryStatus.values.firstWhere(
         (e) => e.name == status,
         orElse: () => SyncHistoryStatus.success,
       ),
+      filesSynced: filesSynced,
+      totalFiles: totalFiles,
       errorMessage: errorMessage,
-      fileSize: fileSize,
+      bytesTransferred: bytesTransferred,
     );
   }
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'fileName': fileName,
-    'taskName': taskName,
     'taskId': taskId,
+    'taskName': taskName,
     'timestamp': timestamp.toIso8601String(),
     'status': status,
+    'filesSynced': filesSynced,
+    'totalFiles': totalFiles,
     'errorMessage': errorMessage,
-    'fileSize': fileSize,
+    'bytesTransferred': bytesTransferred,
   };
 
   factory SyncHistoryModel.fromJson(Map<String, dynamic> json) {
     return SyncHistoryModel(
       id: json['id'] as String,
-      fileName: json['fileName'] as String,
-      taskName: json['taskName'] as String,
       taskId: json['taskId'] as String,
+      taskName: json['taskName'] as String,
       timestamp: DateTime.parse(json['timestamp'] as String),
       status: json['status'] as String,
+      filesSynced: json['filesSynced'] as int? ?? 0,
+      totalFiles: json['totalFiles'] as int? ?? 0,
       errorMessage: json['errorMessage'] as String?,
-      fileSize: json['fileSize'] as int?,
+      bytesTransferred: json['bytesTransferred'] as int?,
     );
   }
 

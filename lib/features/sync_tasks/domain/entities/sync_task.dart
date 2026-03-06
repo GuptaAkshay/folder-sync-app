@@ -6,6 +6,7 @@ class SyncTask {
     required this.id,
     required this.name,
     required this.remotePath,
+    required this.remoteFolderName,
     required this.localPath,
     this.syncFrequency = SyncFrequency.onChange,
     this.isTwoWaySync = false,
@@ -22,6 +23,9 @@ class SyncTask {
 
   /// Google Drive folder path (e.g., "Google Drive /Photos").
   final String remotePath;
+
+  /// The human-readable name of the remote Google Drive folder.
+  final String remoteFolderName;
 
   /// Local Android folder path (e.g., "/DCIM/Camera").
   final String localPath;
@@ -41,6 +45,7 @@ class SyncTask {
     String? id,
     String? name,
     String? remotePath,
+    String? remoteFolderName,
     String? localPath,
     SyncFrequency? syncFrequency,
     bool? isTwoWaySync,
@@ -55,6 +60,7 @@ class SyncTask {
       id: id ?? this.id,
       name: name ?? this.name,
       remotePath: remotePath ?? this.remotePath,
+      remoteFolderName: remoteFolderName ?? this.remoteFolderName,
       localPath: localPath ?? this.localPath,
       syncFrequency: syncFrequency ?? this.syncFrequency,
       isTwoWaySync: isTwoWaySync ?? this.isTwoWaySync,

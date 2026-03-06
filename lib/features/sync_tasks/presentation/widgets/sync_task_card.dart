@@ -13,7 +13,7 @@ class SyncTaskCard extends StatelessWidget {
   const SyncTaskCard({
     super.key,
     required this.taskName,
-    required this.remotePath,
+    required this.remoteFolderName,
     required this.localPath,
     required this.status,
     this.progress,
@@ -21,10 +21,11 @@ class SyncTaskCard extends StatelessWidget {
     this.isTwoWay = false,
     this.errorMessage,
     this.onEdit,
+    this.onSyncPressed,
   });
 
   final String taskName;
-  final String remotePath;
+  final String remoteFolderName;
   final String localPath;
   final SyncStatus status;
   final double? progress;
@@ -32,6 +33,7 @@ class SyncTaskCard extends StatelessWidget {
   final bool isTwoWay;
   final String? errorMessage;
   final VoidCallback? onEdit;
+  final VoidCallback? onSyncPressed;
 
   Color get _statusColor => switch (status) {
     SyncStatus.syncing => AppTheme.statusSyncing,
@@ -98,7 +100,7 @@ class SyncTaskCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     const SizedBox(height: 4),
-                    _PathRow(icon: Icons.cloud, text: remotePath),
+                    _PathRow(icon: Icons.cloud, text: remoteFolderName),
                     _PathRow(icon: Icons.folder, text: localPath),
                   ],
                 ),
@@ -161,14 +163,31 @@ class SyncTaskCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  // Edit button
-                  GestureDetector(
-                    onTap: onEdit,
-                    child: const Icon(
-                      Icons.edit,
-                      size: 16,
-                      color: AppTheme.textSecondary,
-                    ),
+                  // Actions row
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (onSyncPressed != null &&
+                          status != SyncStatus.syncing) ...[
+                        GestureDetector(
+                          onTap: onSyncPressed,
+                          child: const Icon(
+                            Icons.play_circle_filled,
+                            size: 24,
+                            color: AppTheme.primary,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                      GestureDetector(
+                        onTap: onEdit,
+                        child: const Icon(
+                          Icons.edit,
+                          size: 20,
+                          color: AppTheme.textSecondary,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
