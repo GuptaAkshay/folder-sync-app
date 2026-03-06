@@ -38,8 +38,8 @@ When `syncEngine.runTask(SyncTask task)` is called:
 
 1.  **Initialisation:** Mark task status as `syncing`. Clear previous errors.
 2.  **Snapshot Generation:**
-    *   Scan the remote Google Drive folder for all files.
-    *   Scan the local Android folder for all files.
+    *   **Recursively** scan the remote Google Drive folder and all its subfolders for files. We will need to map flat relative paths (e.g., `Documents/Budget.xlsx`) to remote IDs.
+    *   **Recursively** scan the local Android folder and all its subfolders for files.
 3.  **State Comparison (The Delta):**
     *   Load the `LastSyncState` (the snapshot of what the folders looked like after the *last* sync).
     *   Compare the current local files, current remote files, and the `LastSyncState`.
@@ -82,18 +82,8 @@ class FileSnapshot {
 
 ## 3. Scope Boundaries for v1
 
-To ensure we can deliver this without getting bogged down in endless edge cases, we should establish some boundaries for the first iteration:
+Based on the agreed requirements, the following boundaries are established for the first iteration:
 
-*   **Flat Folders Only First (Optional but Recommended):** For v1, we could restrict sync to files directly inside the selected folder (no nested sub-folders). *Should we support nested folders right away? It requires recursive Drive API calls and complex local mirroring.*
-*   **Manual Trigger First:** Before we integrate `WorkManager` for background jobs, we will implement a "Sync Now" button on the Dashboard card to trigger the engine manually and observe the logs/history.
-*   **One-Way Sync First (Optional):** We could build Local → Remote one-way sync first to validate the upload logic, then add Two-Way logic incrementally.
-
-## 4. Required Decisions (Action required from User)
-
-Before I start coding, I need your input on the following:
-
-1.  **Nested Folders:** Should the sync engine recursively traverse nested folders, or just sync the flat files sitting directly inside the selected root folders for now? (Flat is significantly easier for Google Drive API querying).
-2.  **Implementation Phases:** Are you okay with implementing the core engine and wiring it to a manual "Sync Now" button first, and leaving the background scheduled `WorkManager` (Hourly/Daily) for the *next* feature after this?
-3.  **Conflict Resolution UI:** As per the plan, LWW is automatic and silent. The "losing" version is kept as a previous version in Drive. Are you happy to proceed with this invisible auto-resolution for now?
-
-Please review these details. Once you approve or answer the questions, I will format this into a formal `docs/FR_sync_engine.md` and begin the execution phase.
+*   **Recursive Nested Folders:** The sync engine **will** recursively traverse nested folders on both the local and remote sides. The `LastSyncState` mapping will need to handle relative paths to accurately track files deeply nested within the synced root folders.
+*   **Manual Trigger First (Phased Implementation):** We will build the core engine and orchestrate it via a "Sync Now" button on the Dashboard. This separates the complexity of the core sync logic from Android's background execution limits. Integrating `WorkManager` for scheduled background syncs will be the next logical feature.
+*   **Automatic Silent LWW Resolution:** Conflict resolution (modified on both sides since last sync) will automatically pick the file with the most recent modified timestamp (Last-Write-Wins). The "losing" version is silently overwritten locally, but preserved remotely via Google Drive's native 30-day version history.
