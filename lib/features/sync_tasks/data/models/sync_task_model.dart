@@ -11,6 +11,7 @@ class SyncTaskModel {
     required this.id,
     required this.name,
     required this.remotePath,
+    required this.remoteFolderName,
     required this.localPath,
     required this.syncFrequency,
     required this.isTwoWaySync,
@@ -25,6 +26,7 @@ class SyncTaskModel {
   final String id;
   final String name;
   final String remotePath;
+  final String remoteFolderName;
   final String localPath;
   final String syncFrequency;
   final bool isTwoWaySync;
@@ -41,6 +43,7 @@ class SyncTaskModel {
       id: task.id,
       name: task.name,
       remotePath: task.remotePath,
+      remoteFolderName: task.remoteFolderName,
       localPath: task.localPath,
       syncFrequency: task.syncFrequency.name,
       isTwoWaySync: task.isTwoWaySync,
@@ -59,6 +62,7 @@ class SyncTaskModel {
       id: id,
       name: name,
       remotePath: remotePath,
+      remoteFolderName: remoteFolderName,
       localPath: localPath,
       syncFrequency: SyncFrequency.values.firstWhere(
         (e) => e.name == syncFrequency,
@@ -82,6 +86,7 @@ class SyncTaskModel {
     'id': id,
     'name': name,
     'remotePath': remotePath,
+    'remoteFolderName': remoteFolderName,
     'localPath': localPath,
     'syncFrequency': syncFrequency,
     'isTwoWaySync': isTwoWaySync,
@@ -99,6 +104,8 @@ class SyncTaskModel {
       id: json['id'] as String,
       name: json['name'] as String,
       remotePath: json['remotePath'] as String,
+      remoteFolderName:
+          json['remoteFolderName'] as String? ?? 'Google Drive Folder',
       localPath: json['localPath'] as String,
       syncFrequency: json['syncFrequency'] as String,
       isTwoWaySync: json['isTwoWaySync'] as bool,

@@ -145,13 +145,13 @@ class _HistoryItemTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  entry.fileName,
+                  entry.taskName,
                   style: Theme.of(context).textTheme.titleSmall,
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  entry.taskName,
+                  '${entry.filesSynced} of ${entry.totalFiles} files synced',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],

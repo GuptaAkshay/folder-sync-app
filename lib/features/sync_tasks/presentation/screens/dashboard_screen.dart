@@ -6,6 +6,7 @@ import '../../../../app/router.dart';
 import '../../../../app/theme.dart';
 import '../../../../shared/providers/app_providers.dart';
 import '../../domain/entities/sync_task.dart';
+import '../../domain/services/sync_engine_service.dart';
 import '../../../../shared/widgets/app_logo.dart';
 import '../widgets/drive_connection_card.dart';
 import '../widgets/sync_task_card.dart';
@@ -98,7 +99,7 @@ class DashboardScreen extends ConsumerWidget {
   }
 }
 
-class _TasksSection extends StatelessWidget {
+class _TasksSection extends ConsumerWidget {
   const _TasksSection({required this.tasks});
   final List<SyncTask> tasks;
 
@@ -110,7 +111,7 @@ class _TasksSection extends StatelessWidget {
   };
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -172,13 +173,21 @@ class _TasksSection extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: AppTheme.spacingSm),
               child: SyncTaskCard(
                 taskName: task.name,
-                remotePath: task.remotePath,
+                remoteFolderName: task.remoteFolderName,
                 localPath: task.localPath,
                 status: _mapStatus(task.status),
                 progress: task.progress,
                 filesRemaining: task.filesRemaining,
                 isTwoWay: task.isTwoWaySync,
                 errorMessage: task.errorMessage,
+                onSyncPressed: () {
+                  ref.read(syncEngineServiceProvider).runTask(task);
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Starting sync for ${task.name}')),
+                    );
+                  }
+                },
               ),
             ),
           ),

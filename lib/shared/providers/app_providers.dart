@@ -15,6 +15,8 @@ import '../../../features/sync_tasks/domain/repositories/sync_task_repository.da
 import '../../../features/history/data/repositories/sync_history_repository_impl.dart';
 import '../../../features/history/domain/entities/sync_history_entry.dart';
 import '../../../features/history/domain/repositories/sync_history_repository.dart';
+import '../../../features/sync_tasks/domain/repositories/sync_state_repository.dart';
+import '../../../features/sync_tasks/data/repositories/sync_state_repository_impl.dart';
 
 // ─── Auth Providers ─────────────────────────────────
 
@@ -127,6 +129,19 @@ final syncTasksStreamProvider = StreamProvider<List<SyncTask>>((ref) {
 final syncTasksProvider = FutureProvider<List<SyncTask>>((ref) async {
   final repo = ref.read(syncTaskRepositoryProvider);
   return repo.getAllTasks();
+});
+
+// ─── Sync State Providers ───────────────────────────
+
+/// Hive box for sync state snapshots.
+final syncStateBoxProvider = Provider<Box<String>>((ref) {
+  throw UnimplementedError('syncStateBoxProvider must be overridden');
+});
+
+/// Provides the sync state repository instance.
+final syncStateRepositoryProvider = Provider<SyncStateRepository>((ref) {
+  final box = ref.read(syncStateBoxProvider);
+  return SyncStateRepositoryImpl(box: box);
 });
 
 // ─── History Providers ──────────────────────────────
